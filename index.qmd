@@ -1,0 +1,12 @@
+---
+title: "Week1 - Perceptron"
+format: html
+---
+___
+
+##### Perceptron is the foundation of deep learning.
+##### Let's build intuitions
+
+
+{{< video https://youtu.be/U5NXzaiNZ3k?si=0fnYqn1O76mEe5xB >}}
+___

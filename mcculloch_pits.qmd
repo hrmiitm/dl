@@ -1,0 +1,151 @@
+---
+title: "McCulloch & Pitts"
+format: html
+---
+
+## **Biological Neuron vs Artificial Neuron**
+
+Artificial neurons are inspired by biological neurons, but there are significant differences between them:
+
+### Differences
+1. **Efficiency**
+   - The human brain contains approximately **100 billion neurons** and consumes about **20 watts of power**.
+   - Simple artificial neural networks can consume power in the range of **kilowatts to megawatts**, making them far less efficient.
+
+2. **Processing Mechanism**
+   - **Biological neurons** process signals through complex, largely unknown mechanisms in the soma and other parts of the neuron.
+   - **Artificial neurons** process signals using straightforward mathematical functions and weighted sums.
+
+### Similarities
+1. **Inspiration**
+   - Both biological and artificial neurons are based on the concept of processing and transmitting signals.
+   - They use inputs (stimuli for biological neurons, numerical values for artificial neurons) and generate outputs (responses or activations).
+
+2. **Interconnected Systems**
+   - Biological neurons connect through synapses to form neural networks in the brain.
+   - Artificial neurons are interconnected in layers to form artificial neural networks.
+
+3. **Learning and Adaptation**
+   - Biological neurons adapt through synaptic plasticity (e.g., Hebbian learning).
+   - Artificial neurons adapt by **updating weights** using algorithms such as gradient descent.
+
+---
+
+By understanding both the differences and similarities, we can better appreciate the capabilities and limitations of artificial neurons compared to their biological counterparts.
+
+---
+
+## **McCulloch (Neuroscientist) & Pitts (Logician)**
+
+```{mermaid}
+flowchart LR
+  A["Inputs (0,1)"] --> B(Processing) --> C["Output (0,1)"]
+```
+
+### **Terminology**
+
+Suppose you’re deciding whether a customer will buy your product based on the following factors:
+
+- **Inputs**:
+  - `isMarketOpen`: Whether the market is open.
+  - `hasHusbandHaveInterest`: Whether the husband is interested.
+  - `hisWifeHasInterest`: Whether the wife is interested.
+  - `veryRichPerson`: Whether the customer is very wealthy.
+
+- **Output**:
+  - **They will buy**:
+    - If both the husband and wife have interest.
+    - If **anyone** has interest and they are a very rich person.
+  - **They will not buy**:
+    - If no one has interest, regardless of whether they are rich or not.
+
+---
+
+#### 1. Inhibitory Input ------$\circ$
+
+- If any one of these is active (1), then the output will always be **0**.  
+- **Example**: **isMarketOpen** is inhibitory input, without that buying is impossible.
+
+#### 2. Excitatory Input $\longrightarrow$
+- If any one of these is active (1), it pushes toward an output of **1**.  
+- **Example**: Except isMarketOpen **all other 3** are excitatory input.
+
+#### 3. Threshold
+- This is the barrier that needs to be crossed by excitatory input to produce an output of **1**.  
+- **Example**: In above example **thresold will be 2**.
+
+
+---
+
+### **Processing - Prediction Rule**
+
+```{=latex}
+\begin{align*}
+  y = 
+    \begin{cases}
+      0, & \text{IF any inhibitory input is active} \\
+      \begin{cases}
+        1, & \text{if } \sum_{i} x_i \geq \text{threshold} \\
+        0, & \text{otherwise}
+      \end{cases}, & \text{ELSE}
+    \end{cases}
+\end{align*}
+```
+Here, $x_i$ represent excitatory input.
+
+---
+
+### **Example**
+```{mermaid}
+flowchart LR
+  p[hasHusbandHaveIntrest] --> o((("MyNeuron Thresold=2 "))) --> C["0 or 1 ?"]
+  q[hasWifeHaveIntrest] --> o
+  r[isVeryRich] --> o
+```
+
+- *Case1:* **Input(0,0,0)** ---> 0+0+0 >= 0 ---> **Output = 0**
+- *Case2:* **Input(0,0,1)** ---> 0+0+1 >= 1 ---> **Output = 0**
+- *Case3:* **Input(0,1,0)** ---> 0+1+0 >= 1 ---> **Output = 0**
+- *Case4:* **Input(1,0,0)** ---> 1+0+0 >= 1 ---> **Output = 0**
+- *Case5:* **Input(1,1,0)** ---> 1+1+0 >= 2 ---> **Output = 1**
+- *Case6:* **Input(1,0,1)** ---> 1+0+1 >= 2 ---> **Output = 1**
+- *Case7:* **Input(0,1,1**) ---> 0+1+1 >= 2 ---> **Output = 1**
+- *Case8:* **Input(1,1,1)** ---> 1+1+1 >= 3 ---> **Output = 1**
+
+### **Limitations**
+1. Inputs and Outputs are Booleans only.
+2. Each input has same importances/weightages.
+3. Work for only linearly seperable cases.
+
+## **Questions**
+
+::: {.quiz}
+1. *Is bilogical neuron and artificial neuron is same?*
+    <details>
+      <summary>Answer</summary>
+        **Answer:** No, Read First Paragraph for Differences
+    </details>
+
+2. *Represent AND & OR logical gates via McCulloch and Pitts Neuron.*
+
+3. *Which of the following logical gates cannot be represented by McCulloch Pitts Neuron?*
+
+    - [ ] AND
+    - [ ] OR
+    - [ ] NOT
+    - [ ] NOR
+    - [ ] NAND
+    - [ ] XOR
+    
+    <details>
+      <summary>Answer</summary>
+        **Answer:** XOR, since its is not linearly seperable.
+    </details>
+:::
+
+
+---
+
+---
+
+Thanks, If any disperency or suggestion. Feel free to report me.

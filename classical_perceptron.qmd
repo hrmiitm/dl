@@ -1,0 +1,127 @@
+---
+title: "Classical Perceptron"
+format: html
+---
+
+---
+title: "Classical Perceptron Model"
+format: html
+---
+
+## **Classical Perceptron Model**
+
+- **Proposed by**: Frank Rosenblatt (1958)  
+- **Refined by**: Marvin Minsky & Seymour Papert (1969)  
+- **Input**: $\mathbb{R}$, Boolean, etc.  
+- **Processing**:
+  - **g**: Computes the weighted sum of inputs.
+  - **f**: Activation function that transforms the output into the required range.
+- **Output**: $\mathbb{R}$, Boolean, etc.  
+
+---
+
+## **Single Perceptron Algorithm**
+
+Let’s understand a simple classical perceptron algorithm for classification:
+
+- **Input**: $\mathbb{R}$
+- **Output**: Boolean  
+
+Given inputs \($x_1, x_2, ... , x_n$\), where *n* is the number of inputs:  
+- **$x_0$: Bias** input (typically set to **1**).  
+- **$w_0$: Bias weight**, similar to thresold in McCulloch Pitts Neuron Model.  
+
+The perceptron rule can be defined mathematically as follows:
+
+```{=latex}
+\begin{align*}
+  y = 
+  \begin{cases} 
+    1, & \text{if } \sum_{i=0}^n x_i \cdot w_i \geq 0 \\ 
+    0, & \text{otherwise}
+  \end{cases}
+\end{align*}
+```
+
+## **Example**
+
+### Input:
+
+- **`isFatherGaveMoney`** (0, 1): Father gives 40 rupees daily.
+- **`isMotherGaveMoney`** (0, 1): Mother gives 70 rupees daily.
+- **`brotherGaveMoney`** (0, $\infty$): Brother gives an unfixed amount of money.
+- **`iGiveToJuice`** (0, 1): If I drink juice, it costs 20 rupees.
+
+### Output:
+
+- **`0`**: Did not buy any book.
+- **`1`**: Bought a book.
+
+There are 4 books in the store priced at [100, 110, 150, 120].  
+I will buy a book if I have enough money collected from my family.
+
+---
+
+### Framing the Above Problem in Perceptron Form
+
+::: {.quiz}
+
+1. **What is the bias ($w_0$)?**  
+
+   <details>
+     <summary>Answer</summary>
+     **Answer:** -100. The bias is 100 because the total money aggregated must be at least 100 to buy any book, as the minimum price of a book is 100.
+   </details>
+
+2. **What are the corresponding weights for all inputs?**
+
+   <details>
+     <summary>Answer</summary>
+     
+     -  $x_1$ (`isFatherGaveMoney`): **+40**
+     -  $x_2$ (`isMotherGaveMoney`): **+70**
+     -  $x_3$` (`brotherGaveMoney`): **+1** 
+     -  $x_4$ (`iGiveToJuice`): **-20**
+     
+   </details>
+
+3. **What is the final mathematical function?**  
+
+   <details>
+     <summary>Answer</summary>
+     
+     $y = \begin{cases} 1, & \text{if } -100 + 40x_1 + 70x_2 + x_3 - 20x_4 \geq 0 \\ 0, & \text{otherwise} \end{cases}$
+     
+   </details>
+
+:::
+
+## Let's Understand Working
+
+To better understand how the perceptron works, let's evaluate it for some sample inputs:
+
+| `isFatherGaveMoney` ($x_1$) | `isMotherGaveMoney` ($x_2$) | `brotherGaveMoney` ($x_3$) | `iGiveToJuice` ($x_4$) | Function Value ($f(x)$)                     | Output ($y$) |
+|-----------------------------|-----------------------------|---------------------------|------------------------|--------------------------------------------|--------------|
+| 1                           | 1                           | 20                        | 0                      | $-100 + 40(1) + 70(1) + 1(20) - 20(0) = 30$ | 1            |
+| 1                           | 1                           | 0                        | 1                      | $-100 + 40(1) + 70(1) + 1(0) - 20(1) = -10$ | 0            |
+| 1                           | 1                           | 10                        | 0                      | $-100 + 40(1) + 70(1) + 1(10) - 20(0) = 20$ | 1            |
+| 0                           | 1                           | 90                         | 1                      | $-100 + 40(0) + 70(1) + 1(90) - 20(1) = 40$   | 1            |
+
+---
+
+### Explanation of the Table:
+1. In first input, Family gave 130 rs and and after giving 20rs to juce boy, he has 110 rs which crossed the thresold.
+
+2. In Second input, Family given 110 rs. which is enough to buy book. But due to juice, 20 rs deducted and has 90rs only.
+
+3. Similarly all other other cases.
+
+
+
+  
+
+
+
+
+
+

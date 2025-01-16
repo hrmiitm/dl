@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Deep Learning by HRM"
+  search: false
+  navbar:
+    style: "floating"
+    pinned: false
+    tools:
+      - icon: youtube
+        href: https://www.youtube.com/@deepinside333hrm
+        target: _blank
+
+  sidebar:
+    style: "floating"
+    search: false
+    collapse-level: 1
+    contents:
+      - text: "About The Course"
+        href: about_dl.qmd
+      - section: "Week1"
+        href: index.qmd
+        contents:
+          - mcculloch_pits.qmd
+          - classical_perceptron.qmd
+          - classical_perceptron_training.qmd
+      - section: "Week2"
+        href: week2.qmd
+        contents:
+          - "Coming Soon"
+      
+
+format:
+  html:
+    icon: true
+    theme: 
+      light: litera
+      dark: sketchy
+    css: styles.css
+    toc: true
+
+
+

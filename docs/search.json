@@ -1,0 +1,186 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Week1 - Perceptron",
+    "section": "",
+    "text": "Perceptron is the foundation of deep learning.\n\n\nLet’s build intuitions",
+    "crumbs": [
+      "Week1"
+    ]
+  },
+  {
+    "objectID": "about_dl.html",
+    "href": "about_dl.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "About The Course"
+    ]
+  },
+  {
+    "objectID": "week2.html",
+    "href": "week2.html",
+    "title": "Week2",
+    "section": "",
+    "text": "I am also learning along with you\n\nKindly wait content will be uploaded before quizes.",
+    "crumbs": [
+      "Week2"
+    ]
+  },
+  {
+    "objectID": "mcculloch_pits.html",
+    "href": "mcculloch_pits.html",
+    "title": "McCulloch & Pitts",
+    "section": "",
+    "text": "Artificial neurons are inspired by biological neurons, but there are significant differences between them:\n\n\n\nEfficiency\n\nThe human brain contains approximately 100 billion neurons and consumes about 20 watts of power.\nSimple artificial neural networks can consume power in the range of kilowatts to megawatts, making them far less efficient.\n\nProcessing Mechanism\n\nBiological neurons process signals through complex, largely unknown mechanisms in the soma and other parts of the neuron.\nArtificial neurons process signals using straightforward mathematical functions and weighted sums.\n\n\n\n\n\n\nInspiration\n\nBoth biological and artificial neurons are based on the concept of processing and transmitting signals.\nThey use inputs (stimuli for biological neurons, numerical values for artificial neurons) and generate outputs (responses or activations).\n\nInterconnected Systems\n\nBiological neurons connect through synapses to form neural networks in the brain.\nArtificial neurons are interconnected in layers to form artificial neural networks.\n\nLearning and Adaptation\n\nBiological neurons adapt through synaptic plasticity (e.g., Hebbian learning).\nArtificial neurons adapt by updating weights using algorithms such as gradient descent.\n\n\n\nBy understanding both the differences and similarities, we can better appreciate the capabilities and limitations of artificial neurons compared to their biological counterparts.",
+    "crumbs": [
+      "Week1",
+      "McCulloch & Pitts"
+    ]
+  },
+  {
+    "objectID": "mcculloch_pits.html#biological-neuron",
+    "href": "mcculloch_pits.html#biological-neuron",
+    "title": "Biology to McCulloch & Pits",
+    "section": "Biological Neuron",
+    "text": "Biological Neuron",
+    "crumbs": [
+      "Week1",
+      "Biology to McCulloch & Pits"
+    ]
+  },
+  {
+    "objectID": "mcculloch_pits.html#mccullochneuroscientist-pitslogician",
+    "href": "mcculloch_pits.html#mccullochneuroscientist-pitslogician",
+    "title": "Biology to McCulloch & Pits",
+    "section": "McCulloch(Neuroscientist) & Pits(Logician)",
+    "text": "McCulloch(Neuroscientist) & Pits(Logician)\n\nInputs(0,1) \\(\\longrightarrow\\)  \\(\\longrightarrow\\) Output(0,1)\n\nThanks, If any disperency or suggestion. Feel free to report me.",
+    "crumbs": [
+      "Week1",
+      "Biology to McCulloch & Pits"
+    ]
+  },
+  {
+    "objectID": "mcculloch_pits.html#types-and-terminology",
+    "href": "mcculloch_pits.html#types-and-terminology",
+    "title": "Biology to McCulloch & Pits",
+    "section": "",
+    "text": "If any one of these is active (1), then the output will always be 0.\n\nRepresents signals that stop or inhibit action.\n\n\n\n\n\nIf any one of these is active (1), it pushes toward an output of 1.\n\nRepresents signals that encourage activation.\n\n\n\n\n\nThis is the barrier that needs to be crossed by excitatory input to produce an output of 1.\n\nExample:\n\nSuppose you’re deciding whether to buy a product.\n\nIf the threshold is ₹100, you need to have at least ₹100 from any source (inputs) to proceed with the purchase.",
+    "crumbs": [
+      "Week1",
+      "Biology to McCulloch & Pits"
+    ]
+  },
+  {
+    "objectID": "mcculloch_pits.html#visual-representation-of-the-neuron",
+    "href": "mcculloch_pits.html#visual-representation-of-the-neuron",
+    "title": "Biology to McCulloch & Pits",
+    "section": "Visual Representation of the Neuron",
+    "text": "Visual Representation of the Neuron\n```mermaid graph LR A[Inputs (0,1)] –&gt;|Excitatory/Inhibitory| B(Circle: Processing Node) B –&gt; C[Output (0,1)]\nThanks, If any disperency or suggestion. Feel free to report me.",
+    "crumbs": [
+      "Week1",
+      "Biology to McCulloch & Pits"
+    ]
+  },
+  {
+    "objectID": "mcculloch_pits.html#mcculloch-neuroscientist-pitts-logician",
+    "href": "mcculloch_pits.html#mcculloch-neuroscientist-pitts-logician",
+    "title": "McCulloch & Pitts",
+    "section": "McCulloch (Neuroscientist) & Pitts (Logician)",
+    "text": "McCulloch (Neuroscientist) & Pitts (Logician)\n\n\n\n\n\nflowchart LR\n  A[\"Inputs (0,1)\"] --&gt; B(Processing) --&gt; C[\"Output (0,1)\"]\n\n\n\n\n\n\n\nTerminology\nSuppose you’re deciding whether a customer will buy your product based on the following factors:\n\nInputs:\n\nisMarketOpen: Whether the market is open.\nhasHusbandHaveInterest: Whether the husband is interested.\nhisWifeHasInterest: Whether the wife is interested.\nveryRichPerson: Whether the customer is very wealthy.\n\nOutput:\n\nThey will buy:\n\nIf both the husband and wife have interest.\nIf anyone has interest and they are a very rich person.\n\nThey will not buy:\n\nIf no one has interest, regardless of whether they are rich or not.\n\n\n\n\n\n1. Inhibitory Input ——\\(\\circ\\)\n\nIf any one of these is active (1), then the output will always be 0.\n\nExample: isMarketOpen is inhibitory input, without that buying is impossible.\n\n\n\n2. Excitatory Input \\(\\longrightarrow\\)\n\nIf any one of these is active (1), it pushes toward an output of 1.\n\nExample: Except isMarketOpen all other 3 are excitatory input.\n\n\n\n3. Threshold\n\nThis is the barrier that needs to be crossed by excitatory input to produce an output of 1.\n\nExample: In above example thresold will be 2.\n\n\n\n\n\nProcessing - Prediction Rule\n\\[\\begin{align*}\n  y =\n    \\begin{cases}\n      0, & \\text{IF any inhibitory input is active} \\\\\n      \\begin{cases}\n        1, & \\text{if } \\sum_{i} x_i \\geq \\text{threshold} \\\\\n        0, & \\text{otherwise}\n      \\end{cases}, & \\text{ELSE}\n    \\end{cases}\n\\end{align*}\\]\nHere, \\(x_i\\) represent excitatory input.\n\n\n\nExample\n\n\n\n\n\nflowchart LR\n  p[hasHusbandHaveIntrest] --&gt; o(((\"MyNeuron Thresold=2 \"))) --&gt; C[\"0 or 1 ?\"]\n  q[hasWifeHaveIntrest] --&gt; o\n  r[isVeryRich] --&gt; o\n\n\n\n\n\n\n\nCase1: Input(0,0,0) —&gt; 0+0+0 &gt;= 0 —&gt; Output = 0\nCase2: Input(0,0,1) —&gt; 0+0+1 &gt;= 1 —&gt; Output = 0\nCase3: Input(0,1,0) —&gt; 0+1+0 &gt;= 1 —&gt; Output = 0\nCase4: Input(1,0,0) —&gt; 1+0+0 &gt;= 1 —&gt; Output = 0\nCase5: Input(1,1,0) —&gt; 1+1+0 &gt;= 2 —&gt; Output = 1\nCase6: Input(1,0,1) —&gt; 1+0+1 &gt;= 2 —&gt; Output = 1\nCase7: Input(0,1,1) —&gt; 0+1+1 &gt;= 2 —&gt; Output = 1\nCase8: Input(1,1,1) —&gt; 1+1+1 &gt;= 3 —&gt; Output = 1\n\n\n\nLimitations\n\nInputs and Outputs are Booleans only.\nEach input has same importances/weightages.\nWork for only linearly seperable cases.",
+    "crumbs": [
+      "Week1",
+      "McCulloch & Pitts"
+    ]
+  },
+  {
+    "objectID": "mcculloch_pits.html#questions",
+    "href": "mcculloch_pits.html#questions",
+    "title": "McCulloch & Pitts",
+    "section": "Questions",
+    "text": "Questions\n\n\nIs bilogical neuron and artificial neuron is same?\n\n\nAnswer\n\nAnswer: Read First Paragraph for Differences\n\nRepresent AND & OR logical gates via McCulloch and Pitts Neuron.\nWhich of the following logical gates cannot be represented by McCulloch Pitts Neuron?\n\nAND\nOR\nNOT\nNOR\nNAND\nXOR\n\n\n\nAnswer\n\nAnswer: XOR, since its is not linearly seperable.\n\n\n\n\n\nThanks, If any disperency or suggestion. Feel free to report me.",
+    "crumbs": [
+      "Week1",
+      "McCulloch & Pitts"
+    ]
+  },
+  {
+    "objectID": "mcculloch_pits.html#biological-neuron-vs-artificial-neuron",
+    "href": "mcculloch_pits.html#biological-neuron-vs-artificial-neuron",
+    "title": "McCulloch & Pitts",
+    "section": "",
+    "text": "Artificial neurons are inspired by biological neurons, but there are significant differences between them:\n\n\n\nEfficiency\n\nThe human brain contains approximately 100 billion neurons and consumes about 20 watts of power.\nSimple artificial neural networks can consume power in the range of kilowatts to megawatts, making them far less efficient.\n\nProcessing Mechanism\n\nBiological neurons process signals through complex, largely unknown mechanisms in the soma and other parts of the neuron.\nArtificial neurons process signals using straightforward mathematical functions and weighted sums.\n\n\n\n\n\n\nInspiration\n\nBoth biological and artificial neurons are based on the concept of processing and transmitting signals.\nThey use inputs (stimuli for biological neurons, numerical values for artificial neurons) and generate outputs (responses or activations).\n\nInterconnected Systems\n\nBiological neurons connect through synapses to form neural networks in the brain.\nArtificial neurons are interconnected in layers to form artificial neural networks.\n\nLearning and Adaptation\n\nBiological neurons adapt through synaptic plasticity (e.g., Hebbian learning).\nArtificial neurons adapt by updating weights using algorithms such as gradient descent.\n\n\n\nBy understanding both the differences and similarities, we can better appreciate the capabilities and limitations of artificial neurons compared to their biological counterparts.",
+    "crumbs": [
+      "Week1",
+      "McCulloch & Pitts"
+    ]
+  },
+  {
+    "objectID": "classical_perceptron.html",
+    "href": "classical_perceptron.html",
+    "title": "Classical Perceptron Model",
+    "section": "",
+    "text": "Proposed by: Frank Rosenblatt (1958)\n\nRefined by: Marvin Minsky & Seymour Papert (1969)\n\nInput: \\(\\mathbb{R}\\), Boolean, etc.\n\nProcessing:\n\ng: Computes the weighted sum of inputs.\nf: Activation function that transforms the output into the required range.\n\nOutput: \\(\\mathbb{R}\\), Boolean, etc.",
+    "crumbs": [
+      "Week1",
+      "Classical Perceptron Model"
+    ]
+  },
+  {
+    "objectID": "classical_perceptron.html#classical-perceptron-model",
+    "href": "classical_perceptron.html#classical-perceptron-model",
+    "title": "Classical Perceptron Model",
+    "section": "",
+    "text": "Proposed by: Frank Rosenblatt (1958)\n\nRefined by: Marvin Minsky & Seymour Papert (1969)\n\nInput: \\(\\mathbb{R}\\), Boolean, etc.\n\nProcessing:\n\ng: Computes the weighted sum of inputs.\nf: Activation function that transforms the output into the required range.\n\nOutput: \\(\\mathbb{R}\\), Boolean, etc.",
+    "crumbs": [
+      "Week1",
+      "Classical Perceptron Model"
+    ]
+  },
+  {
+    "objectID": "classical_perceptron.html#single-perceptron-algorithm",
+    "href": "classical_perceptron.html#single-perceptron-algorithm",
+    "title": "Classical Perceptron Model",
+    "section": "Single Perceptron Algorithm",
+    "text": "Single Perceptron Algorithm\nLet’s understand a simple classical perceptron algorithm for classification:\n\nInput: \\(\\mathbb{R}\\)\nOutput: Boolean\n\nGiven inputs (\\(x_1, x_2, ... , x_n\\)), where n is the number of inputs:\n- \\(x_0\\): Bias input (typically set to 1).\n- \\(w_0\\): Bias weight, similar to thresold in McCulloch Pitts Neuron Model.\nThe perceptron rule can be defined mathematically as follows:\n\\[\\begin{align*}\n  y =\n  \\begin{cases}\n    1, & \\text{if } \\sum_{i=0}^n x_i \\cdot w_i \\geq 0 \\\\\n    0, & \\text{otherwise}\n  \\end{cases}\n\\end{align*}\\]",
+    "crumbs": [
+      "Week1",
+      "Classical Perceptron Model"
+    ]
+  },
+  {
+    "objectID": "classical_perceptron.html#example",
+    "href": "classical_perceptron.html#example",
+    "title": "Classical Perceptron Model",
+    "section": "Example",
+    "text": "Example\n\nInput:\n\nisFatherGaveMoney (0, 1): Father gives 40 rupees daily.\nisMotherGaveMoney (0, 1): Mother gives 70 rupees daily.\nbrotherGaveMoney (0, \\(\\infty\\)): Brother gives an unfixed amount of money.\niGiveToJuice (0, 1): If I drink juice, it costs 20 rupees.\n\n\n\nOutput:\n\n0: Did not buy any book.\n1: Bought a book.\n\nThere are 4 books in the store priced at [100, 110, 150, 120].\nI will buy a book if I have enough money collected from my family.\n\n\n\nFraming the Above Problem in Perceptron Form\n\n\nWhat is the bias (\\(w_0\\))?\n\n\nAnswer\n\nAnswer: -100. The bias is 100 because the total money aggregated must be at least 100 to buy any book, as the minimum price of a book is 100.\n\nWhat are the corresponding weights for all inputs?\n\n\nAnswer\n\n\n\\(x_1\\) (isFatherGaveMoney): +40\n\\(x_2\\) (isMotherGaveMoney): +70\n\\(x_3\\)(brotherGaveMoney`): +1\n\\(x_4\\) (iGiveToJuice): -20\n\n\nWhat is the final mathematical function?\n\n\nAnswer\n\n\\(y = \\begin{cases} 1, & \\text{if } -100 + 40x_1 + 70x_2 + x_3 - 20x_4 \\geq 0 \\\\ 0, & \\text{otherwise} \\end{cases}\\)",
+    "crumbs": [
+      "Week1",
+      "Classical Perceptron Model"
+    ]
+  },
+  {
+    "objectID": "classical_perceptron.html#framing-the-problem-in-perceptron-form",
+    "href": "classical_perceptron.html#framing-the-problem-in-perceptron-form",
+    "title": "Classical Perceptron Model",
+    "section": "Framing the Problem in Perceptron Form",
+    "text": "Framing the Problem in Perceptron Form\n\n\nWhat is the bias (\\(w_0\\))?\n\n\nAnswer\n\nAnswer: 100. The bias is 100 because the total money aggregated must be at least 100 to buy any book, as the minimum price of a book is 100.\n\nWhat are the corresponding weights for all inputs?\n\n\nAnswer\n\n\n\\(x_1\\) (isFatherGaveMoney): +40\n\n\\(x_2\\) (isMotherGaveMoney): +70\n\\(x_3\\)(brotherGaveMoney`): +1\n\\(x_4\\) (iGiveToJuice): -20\n\n\n\nWhat is the final mathematical function?\n\n\nAnswer\n\n\\(y = \\begin{cases} 1, & \\text{if } 100 + 40x_1 + 70x_2 + x_3 - 20x_4 \\geq 0 \\\\ 0, & \\text{otherwise} \\end{cases}\\)",
+    "crumbs": [
+      "Week1",
+      "Classical Perceptron Model"
+    ]
+  },
+  {
+    "objectID": "classical_perceptron.html#lets-understand-working",
+    "href": "classical_perceptron.html#lets-understand-working",
+    "title": "Classical Perceptron Model",
+    "section": "Let’s Understand Working",
+    "text": "Let’s Understand Working\nTo better understand how the perceptron works, let’s evaluate it for some sample inputs:\n\n\n\n\n\n\n\n\n\n\n\nisFatherGaveMoney (\\(x_1\\))\nisMotherGaveMoney (\\(x_2\\))\nbrotherGaveMoney (\\(x_3\\))\niGiveToJuice (\\(x_4\\))\nFunction Value (\\(f(x)\\))\nOutput (\\(y\\))\n\n\n\n\n1\n1\n20\n0\n\\(-100 + 40(1) + 70(1) + 1(20) - 20(0) = 30\\)\n1\n\n\n1\n1\n0\n1\n\\(-100 + 40(1) + 70(1) + 1(0) - 20(1) = -10\\)\n0\n\n\n1\n1\n10\n0\n\\(-100 + 40(1) + 70(1) + 1(10) - 20(0) = 20\\)\n1\n\n\n0\n1\n90\n1\n\\(-100 + 40(0) + 70(1) + 1(90) - 20(1) = 40\\)\n1\n\n\n\n\n\nExplanation of the Table:\n\nIn first input, Family gave 130 rs and and after giving 20rs to juce boy, he has 110 rs which crossed the thresold.\nIn Second input, Family given 110 rs. which is enough to buy book. But due to juice, 20 rs deducted and has 90rs only.\nSimilarly all other other cases.",
+    "crumbs": [
+      "Week1",
+      "Classical Perceptron Model"
+    ]
+  }
+]
