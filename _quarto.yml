@@ -10,8 +10,10 @@ website:
     pinned: false
     tools:
       - icon: youtube
-        href: https://www.youtube.com/@deepinside333hrm
+        href: https://www.youtube.com/playlist?list=PLn_Nuy1c1Oj9qibyyC4iEitbJ_uY-iAm6
         target: _blank
+      - icon: house
+        href: https://hrmiitm.github.io
 
   sidebar:
     style: "floating"

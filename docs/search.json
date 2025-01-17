@@ -12,9 +12,9 @@
   {
     "objectID": "about_dl.html",
     "href": "about_dl.html",
-    "title": "About",
+    "title": "About The Course",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2",
+    "text": "I am currently pursuing a deep learning course as part of my IITM program, complementing my learning journey by creating comprehensive notes and engaging video content. The course content is meticulously curated by me, Hritik Roshan Maurya (HRM), with help of IIT Madras content.\nHaving successfully completed my second year in 2024 with a CGPA of 9.2, I am now delving into deep learning in the January 2025 term. Through this initiative, I aim to document my learning experience while sharing valuable insights with others passionate about this field.",
     "crumbs": [
       "About The Course"
     ]
@@ -100,7 +100,7 @@
     "href": "mcculloch_pits.html#questions",
     "title": "McCulloch & Pitts",
     "section": "Questions",
-    "text": "Questions\n\n\nIs bilogical neuron and artificial neuron is same?\n\n\nAnswer\n\nAnswer: Read First Paragraph for Differences\n\nRepresent AND & OR logical gates via McCulloch and Pitts Neuron.\nWhich of the following logical gates cannot be represented by McCulloch Pitts Neuron?\n\nAND\nOR\nNOT\nNOR\nNAND\nXOR\n\n\n\nAnswer\n\nAnswer: XOR, since its is not linearly seperable.\n\n\n\n\n\nThanks, If any disperency or suggestion. Feel free to report me.",
+    "text": "Questions\n\n\nIs bilogical neuron and artificial neuron is same?\n\n\nAnswer\n\nAnswer: No, Read First Paragraph for Differences\n\nRepresent AND & OR logical gates via McCulloch and Pitts Neuron.\nWhich of the following logical gates cannot be represented by McCulloch Pitts Neuron?\n\nAND\nOR\nNOT\nNOR\nNAND\nXOR\n\n\n\nAnswer\n\nAnswer: XOR, since its is not linearly seperable.\n\n\n\n\n\nThanks, If any disperency or suggestion. Feel free to report me.",
     "crumbs": [
       "Week1",
       "McCulloch & Pitts"
@@ -181,6 +181,50 @@
     "crumbs": [
       "Week1",
       "Classical Perceptron Model"
+    ]
+  },
+  {
+    "objectID": "classical_perceptron_training.html",
+    "href": "classical_perceptron_training.html",
+    "title": "Perceptron Training Algorithm",
+    "section": "",
+    "text": "We now know how perceptron predicts.\nInput is given by the situation, but what will be weights? Weights can be computed by given some input data and labels, and then our perceptron algorithm will learn most appropriate weights.",
+    "crumbs": [
+      "Week1",
+      "Perceptron Training Algorithm"
+    ]
+  },
+  {
+    "objectID": "classical_perceptron_training.html#perceptron-learning-algorithm",
+    "href": "classical_perceptron_training.html#perceptron-learning-algorithm",
+    "title": "Perceptron Training Algorithm",
+    "section": "Perceptron Learning Algorithm",
+    "text": "Perceptron Learning Algorithm\nGiven data:\n\nInputs: [(2,0), (2,1), (0,1), (-2,0), (-2,-2), (0,-2)]\nOutputs: ([1, 1, 1, 0, 0, 0])\n\n\nSteps to Compute/Learn Weights\n\nInitialize the weight vector randomly e.g. \\(w = (-1,1)\\)\nRepeat until convergence:\n\nPick any input point, say \\(p\\).\nIf the weight vector classifies \\(p\\) incorrectly:\n\nAdjust the weight vector using the rules below.\n\n\n\n\n\nRules to Adjust Weights\n\\[\\begin{align*}\nw_{\\text{new}} =\n\\begin{cases}\n    w + p, & \\text{if } p \\in \\text{+ve(1) and } w^T x &lt; 0, \\\\\n    w - p, & \\text{if } p \\in \\text{-ve(0) and } w^T x \\geq 0, \\\\\n    w, & \\text{else}.\n\\end{cases}\n\\end{align*}\\]\n\n\nCaution\nWhile updating weights etc we should account for bias term also.\n\n\\(w = [1, x_{corr}, y_{corr}]\\)\n\\(x = [1, x_{corr}, y_{corr}]\\)",
+    "crumbs": [
+      "Week1",
+      "Perceptron Training Algorithm"
+    ]
+  },
+  {
+    "objectID": "classical_perceptron_training.html#homework",
+    "href": "classical_perceptron_training.html#homework",
+    "title": "Perceptron Training Algorithm",
+    "section": "HomeWork",
+    "text": "HomeWork\nQuestion) Calculate the weight vector from above mentioned algorithm\n\n\nAnswer\n\nAnswer: Watch Youtube Vedio",
+    "crumbs": [
+      "Week1",
+      "Perceptron Training Algorithm"
+    ]
+  },
+  {
+    "objectID": "classical_perceptron_training.html#practice",
+    "href": "classical_perceptron_training.html#practice",
+    "title": "Perceptron Training Algorithm",
+    "section": "Practice",
+    "text": "Practice\nQuestion) Calculate the weight vector using above mentioned algorithm\n\nGiven data:\n\nInputs: [(2,0), (2,1), (0,1), (-2,0), (-2,-2), (0,-2)]\nOutputs: ([1, 1, 1, 0, 0, 0])\n\n\n\n\nAnswer\n\nAnswer: Watch Youtube Vedio",
+    "crumbs": [
+      "Week1",
+      "Perceptron Training Algorithm"
     ]
   }
 ]

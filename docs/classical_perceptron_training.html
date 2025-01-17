@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Perceptron Training – Deep Learning by HRM</title>
+<title>Perceptron Training Algorithm – Deep Learning by HRM</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,7 +35,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f33991cf3c59b7de71e019b8ce5d8602.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-df09ee7639194c170e351a33ef60904b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-4f58f67bf13d4dbba5d1b51c1383cfc1.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
@@ -53,6 +53,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -68,8 +97,9 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Deep Learning by HRM</span>
     </a>
   </div>
-        <div class="quarto-navbar-tools tools-end">
-    <a href="https://www.youtube.com/@deepinside333hrm" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-youtube"></i></a>
+        <div class="quarto-navbar-tools tools-wide tools-end">
+    <a href="https://www.youtube.com/playlist?list=PLn_Nuy1c1Oj9qibyyC4iEitbJ_uY-iAm6" title="" class="quarto-navigation-tool px-1" aria-label="" target="_blank"><i class="bi bi-youtube"></i></a>
+    <a href="https://hrmiitm.github.io" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -79,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Week1</a></li><li class="breadcrumb-item"><a href="./classical_perceptron_training.html">Perceptron Training</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Week1</a></li><li class="breadcrumb-item"><a href="./classical_perceptron_training.html">Perceptron Training Algorithm</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -109,19 +139,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./mcculloch_pits.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Biology to McCulloch &amp; Pits</span></a>
+ <span class="menu-text">McCulloch &amp; Pitts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./classical_perceptron.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Classical Perceptron</span></a>
+ <span class="menu-text">Classical Perceptron Model</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./classical_perceptron_training.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Perceptron Training</span></a>
+ <span class="menu-text">Perceptron Training Algorithm</span></a>
   </div>
 </li>
       </ul>
@@ -145,15 +175,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#perceptron-learning-algorithm" id="toc-perceptron-learning-algorithm" class="nav-link active" data-scroll-target="#perceptron-learning-algorithm"><strong>Perceptron Learning Algorithm</strong></a>
+  <ul class="collapse">
+  <li><a href="#steps-to-computelearn-weights" id="toc-steps-to-computelearn-weights" class="nav-link" data-scroll-target="#steps-to-computelearn-weights"><strong>Steps to Compute/Learn Weights</strong></a></li>
+  <li><a href="#rules-to-adjust-weights" id="toc-rules-to-adjust-weights" class="nav-link" data-scroll-target="#rules-to-adjust-weights"><strong>Rules to Adjust Weights</strong></a></li>
+  <li><a href="#caution" id="toc-caution" class="nav-link" data-scroll-target="#caution"><strong>Caution</strong></a></li>
+  </ul></li>
+  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Week1</a></li><li class="breadcrumb-item"><a href="./classical_perceptron_training.html">Perceptron Training</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Week1</a></li><li class="breadcrumb-item"><a href="./classical_perceptron_training.html">Perceptron Training Algorithm</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Perceptron Training</h1>
+<h1 class="title">Perceptron Training Algorithm</h1>
 </div>
 
 
@@ -170,8 +212,68 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>We now know how perceptron predicts.</p>
+<p>Input is given by the situation, but what will be weights? Weights can be computed by given some input data and labels, and then our perceptron algorithm will learn most appropriate weights.</p>
+<section id="perceptron-learning-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="perceptron-learning-algorithm"><strong>Perceptron Learning Algorithm</strong></h2>
+<p><strong>Given data:</strong></p>
+<ul>
+<li><strong>Inputs:</strong> [(2,0), (2,1), (0,1), (-2,0), (-2,-2), (0,-2)]</li>
+<li><strong>Outputs:</strong> ([1, 1, 1, 0, 0, 0])</li>
+</ul>
+<section id="steps-to-computelearn-weights" class="level3">
+<h3 class="anchored" data-anchor-id="steps-to-computelearn-weights"><strong>Steps to Compute/Learn Weights</strong></h3>
+<ol type="1">
+<li>Initialize the weight vector randomly e.g.&nbsp;<span class="math inline">\(w = (-1,1)\)</span></li>
+<li>Repeat until convergence:
+<ul>
+<li>Pick any input point, say <span class="math inline">\(p\)</span>.</li>
+<li>If the weight vector classifies <span class="math inline">\(p\)</span> <strong>incorrectly</strong>:
+<ul>
+<li>Adjust the weight vector using the rules below.</li>
+</ul></li>
+</ul></li>
+</ol>
+</section>
+<section id="rules-to-adjust-weights" class="level3">
+<h3 class="anchored" data-anchor-id="rules-to-adjust-weights"><strong>Rules to Adjust Weights</strong></h3>
+<span class="math display">\[\begin{align*}
+w_{\text{new}} =
+\begin{cases}
+    w + p, &amp; \text{if } p \in \text{+ve(1) and } w^T x &lt; 0, \\
+    w - p, &amp; \text{if } p \in \text{-ve(0) and } w^T x \geq 0, \\
+    w, &amp; \text{else}.
+\end{cases}
+\end{align*}\]</span>
+</section>
+<section id="caution" class="level3">
+<h3 class="anchored" data-anchor-id="caution"><strong>Caution</strong></h3>
+<p>While updating weights etc we should account for bias term also.</p>
+<ul>
+<li><span class="math inline">\(w = [1, x_{corr}, y_{corr}]\)</span></li>
+<li><span class="math inline">\(x = [1, x_{corr}, y_{corr}]\)</span></li>
+</ul>
+</section>
+</section>
+<section id="practice" class="level2">
+<h2 class="anchored" data-anchor-id="practice">Practice</h2>
+<p><strong>Question) Calculate the weight vector using above mentioned algorithm</strong></p>
+<ul>
+<li><strong>Given data:</strong>
+<ul>
+<li><strong>Inputs:</strong> [(2,0), (2,1), (0,1), (-2,0), (-2,-2), (0,-2)]</li>
+<li><strong>Outputs:</strong> ([1, 1, 1, 0, 0, 0])</li>
+</ul></li>
+</ul>
+<details>
+<summary>
+Answer
+</summary>
+<strong>Answer:</strong> Watch Youtube Vedio
+</details>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

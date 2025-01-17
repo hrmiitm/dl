@@ -116,8 +116,6 @@ To better understand how the perceptron works, let's evaluate it for some sample
 
 3. Similarly all other other cases.
 
-
-
   
 
 

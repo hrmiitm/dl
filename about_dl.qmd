@@ -1,9 +1,7 @@
 ---
-title: "About"
+title: "About The Course"
 ---
 
-About this site
+I am currently pursuing a deep learning course as part of my IITM program, complementing my learning journey by creating comprehensive notes and engaging video content. The course content is meticulously curated by me, Hritik Roshan Maurya (HRM), with help of IIT Madras content.
 
-```{r}
-1 + 1
-```
+Having successfully completed my second year in 2024 with a CGPA of 9.2, I am now delving into deep learning in the January 2025 term. Through this initiative, I aim to document my learning experience while sharing valuable insights with others passionate about this field.

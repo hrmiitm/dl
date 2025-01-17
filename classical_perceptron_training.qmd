@@ -1,5 +1,57 @@
 ---
-title: "Perceptron Training"
+title: "Perceptron Training Algorithm"
 format: html
 ---
 
+We now know how perceptron predicts.
+
+Input is given by the situation, but what will be weights? Weights can be computed by given some input data and labels, and then our perceptron algorithm will learn most appropriate weights.
+
+
+## **Perceptron Learning Algorithm**
+
+**Given data:**
+
+- **Inputs:** [(2,0), (2,1), (0,1), (-2,0), (-2,-2), (0,-2)]
+- **Outputs:** \([1, 1, 1, 0, 0, 0]\)
+
+### **Steps to Compute/Learn Weights**
+
+1. Initialize the weight vector randomly e.g. $w = (-1,1)$
+2. Repeat until convergence:
+    - Pick any input point, say $p$.
+    - If the weight vector classifies $p$ **incorrectly**:
+        - Adjust the weight vector using the rules below.
+
+### **Rules to Adjust Weights**
+
+```{=latex}
+\begin{align*}
+w_{\text{new}} =
+\begin{cases} 
+    w + p, & \text{if } p \in \text{+ve(1) and } w^T x < 0, \\
+    w - p, & \text{if } p \in \text{-ve(0) and } w^T x \geq 0, \\
+    w, & \text{else}.
+\end{cases}
+\end{align*}
+```
+
+### **Caution**
+
+While updating weights etc we should account for bias term also.
+
+  - $w = [1, x_{corr}, y_{corr}]$
+  - $x = [1, x_{corr}, y_{corr}]$
+
+## Practice
+
+**Question) Calculate the weight vector using above mentioned algorithm**
+
+  - **Given data:**
+    - **Inputs:** [(2,0), (2,1), (0,1), (-2,0), (-2,-2), (0,-2)]
+    - **Outputs:** \([1, 1, 1, 0, 0, 0]\)
+    
+  <details>
+    <summary>Answer</summary>
+      **Answer:** Watch Youtube Vedio 
+  </details>
