@@ -10,3 +10,7 @@ ___
 
 {{< video https://youtu.be/U5NXzaiNZ3k?si=0fnYqn1O76mEe5xB >}}
 ___
+
+There are *summary notes* and other weeks content too.
+
+Use *top document symbol* to open navigation bar to navigate to other contents.
