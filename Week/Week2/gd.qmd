@@ -1,0 +1,57 @@
+---
+title: "Gradient Descent"
+format: html
+highlight-style: dracula
+---
+
+## Minimize Loss(w,b) = $\sum \frac{1}{2}(f(x,w,b) - y)^2$
+
+<div style="overflow-x: auto;">
+
+```{python}
+from math import e
+def f(x,w,b): # sigmoid
+    val = (w*x)+b
+    return 1/(1+e**(-val))
+```
+
+</div>
+
+<div style="overflow-x: auto;">
+
+```{python}
+def dw(w,b):
+    my_sum = 0
+    for x,y in data.items():
+        fval = f(x,w,b)
+        my_sum += (fval-y)*fval*(1-fval)*x
+    return my_sum
+
+def db(w,b):
+    my_sum = 0
+    for x,y in data.items():
+        fval = f(x,w,b)
+        my_sum += (fval-y)*fval*(1-fval)
+    return my_sum
+```
+
+</div>
+
+<div style="overflow-x: auto;">
+
+```{python}
+def gd(w, b, eta=1, epoch=3):
+    while epoch>0:
+        (w,b) = (w - eta*dw(w,b)/2, b - eta*db(w,b)/2)
+        epoch -= 1
+    return (w,b)
+```
+
+```{python}
+data = {0.5:0.2, 2.5:0.9}
+gd(-2,-2,1,1000)
+```
+
+
+</div>
+

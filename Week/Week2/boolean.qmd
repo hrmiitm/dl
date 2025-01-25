@@ -1,0 +1,101 @@
+---
+title: "Boolean Functions"
+format: html
+---
+
+## Boolean Inputs and Boolean Output
+
+```{mermaid}
+flowchart LR
+  A["Multiple Inputs (0,1)"] --> B(Processing) --> C["Single Output (0,1)"]
+```
+
+### **Case 1**
+
+**Input**: $\{0,1\}^0$ <br>
+**Output**: $\{0,1\}$
+
+<div style="overflow-x: auto;">
+
+| Input | $f_1$ | $f_2$ |
+|---------|:-----|------:|
+| $\phi$      | 0   |    1 |
+
+</div>
+
+### **Case 2**
+
+**Input**: $\{0,1\}^1$ <br>
+**Output**: $\{0,1\}$
+
+<div style="overflow-x: auto;">
+
+| Input | $f_1$ | $f_2$ | $f_3$ | $f_4$ |
+|-------|-------|-------|-------|-------|
+| 0     | 0     | 0     | 1     | 1     |
+| 1     | 0     | 1     | 0     | 1     |
+
+</div>
+
+
+### **Case 3**
+
+**Input**: $\{0,1\}^2$ <br>
+**Output**: $\{0,1\}$
+
+<div style="overflow-x: auto;">
+
+| Input     | $f_1$ | $f_2$ | $f_3$ | $f_4$ | $f_5$ | $f_6$ | $f_7$ | $f_8$ | $f_9$ | $f_{10}$ | $f_{11}$ | $f_{12}$ | $f_{13}$ | $f_{14}$ | $f_{15}$ | $f_{16}$ |
+|-----------|-------|-------|-------|-------|-------|-------|-------|-------|-------|----------|----------|----------|----------|----------|----------|----------|
+| (0, 0)    | 0     | 0     | 0     | 0     | 0     | 0     | 0     | 0     | 1     | 1        | 1        | 1        | 1        | 1        | 1        | 1        |
+| (0, 1)    | 0     | 0     | 0     | 0     | 1     | 1     | 1     | 1     | 0     | 0        | 0        | 0        | 1        | 1        | 1        | 1        |
+| (1, 0)    | 0     | 0     | 1     | 1     | 0     | 0     | 1     | 1     | 0     | 0        | 1        | 1        | 0        | 0        | 1        | 1        |
+| (1, 1)    | 0     | 1     | 0     | 1     | 0     | 1     | 0     | 1     | 0     | 1        | 0        | 1        | 0        | 1        | 0        | 1        |
+
+</div>
+
+### **Case 4**
+
+**Input**: $\{0,1\}^3$ <br>
+**Output**: $\{0,1\}$
+
+<div style="overflow-x: auto;">
+
+| Input     | $f_1$ | $f_2$ | $f_3$ | ... | ... | $f_{256}$ |
+|-----------|---|---|---|---|---| --- |
+| (0, 0, 0) | 0     | 0     | 0     | ...   | ...   | 1      |
+| (0, 0, 1) | 0     | 0     | 1     | ...   | ...   | 1      |
+| (0, 1, 0) | 0     | 1     | 0     | ...   | ...   | 1      |
+| (0, 1, 1) | 0     | 1     | 1     | ...   | ...   | 1      |
+| (1, 0, 0) | 1     | 0     | 0     | ...   | ...   | 1      |
+| (1, 0, 1) | 1     | 0     | 1     | ...   | ...   | 1      |
+| (1, 1, 0) | 1     | 1     | 0     | ...   | ...   | 1      |
+| (1, 1, 1) | 1     | 1     | 1     | ...   | ...   | 1      |
+
+</div>
+
+_Note_: For **Case 4**, there are $2^{2^3} = 256$ possible functions, so only a few examples are shown, with `...` to indicate the continuation.
+
+
+## **No. of Boolean Functions**
+
+**If n boolean inputs** 
+  then **$2^{2^n}$** Boolean Functions Possible
+
+## **How many Linearly Seprable**
+
+- **Case 1: n=0** : All 2
+- **Case 2: n=1** : All 4
+- **Case 3: n=2** : $(16-2) = 14$, only **XOR** and **!XOR** are NonLinearlySeprable
+- **For any General n**: Manuall check required, no general formula
+
+
+## **Question**
+
+1. **Why for n boolean inputs there exists $2^{2^n}$ boolean functions ?**  
+
+   <details>
+     <summary>Answer</summary>
+     **Watch My Summary or Assignment explanation video.**
+   </details>
+

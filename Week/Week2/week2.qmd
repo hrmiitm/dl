@@ -1,0 +1,13 @@
+---
+title: "Week2 - More On Perceptron"
+format: html
+---
+___
+
+
+{{< video https://youtu.be/6pcbdESqBEQ >}}
+___
+
+There are *summary notes* and other weeks content too.
+
+Use *top document symbol* to open navigation bar to navigate to other contents.

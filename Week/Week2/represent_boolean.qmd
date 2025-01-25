@@ -1,0 +1,40 @@
+---
+title: "Boolean Implementation"
+format: html
+---
+
+## **Questions**
+
+::: {.quiz}
+1. *Can we implement any Boolean function with single perceptron?*
+    <details>
+      <summary>Answer</summary>
+        **Answer:** No, Single Perceptron can only separate Linearly Separable Inputs.
+    </details>
+
+2. *Can non linearly separable boolean function be implemented with multiple perceptron? How?*
+    <details>
+      <summary>Answer</summary>
+        **Answer:** Yes, with $2^n + 1$ perceptron and 3 layers(input, hidden($2^n$), output(1)) we can definetely implement.
+        Note: With less than $2^n+1$, is also possible
+    </details>
+
+3. *Do you have intution that how perceptron that linearly separate is now able to separate even non-linearly seprable boolean inputs?*
+    <details>
+      <summary>Answer</summary>
+        **Answer:** If **No** then watch my summary video.
+    </details>
+    
+4. *Can non linearly separable boolean function be implemented with multiple perceptron? How?*
+    <details>
+      <summary>Answer</summary>
+        **Answer:** Yes, with $2^n + 1$ perceptron and 3 layers(input, hidden($2^n$), output(1)) we can definetely implement.
+        Note: With less than $2^n+1$, is also possible
+    </details>
+    
+5. *What is minimum no. of neuron are required to implement XOR boolean function?*
+    <details>
+      <summary>Answer</summary>
+        **Answer:** **3**, with $2^2+1 = 5$ we can definitely do, but question asks for minimum, and with just 3 we can implement boolean function.
+    </details>
+:::

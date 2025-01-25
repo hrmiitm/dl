@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week1 - Perceptron – Deep Learning by HRM</title>
+<title>Boolean Functions – Deep Learning by HRM</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,20 +23,20 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df09ee7639194c170e351a33ef60904b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4f58f67bf13d4dbba5d1b51c1383cfc1.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-df09ee7639194c170e351a33ef60904b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4f58f67bf13d4dbba5d1b51c1383cfc1.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -52,9 +52,41 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -64,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Deep Learning by HRM</span>
     </a>
   </div>
@@ -80,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Week1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Week/Week2/week2.html">Week2</a></li><li class="breadcrumb-item"><a href="../../Week/Week2/boolean.html">Boolean Functions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -94,34 +126,34 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about_dl.html" class="sidebar-item-text sidebar-link">
+  <a href="../../about_dl.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About The Course</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week1</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mcculloch_pits.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mcculloch_pits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">McCulloch &amp; Pitts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./classical_perceptron.html" class="sidebar-item-text sidebar-link">
+  <a href="../../classical_perceptron.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Classical Perceptron Model</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./classical_perceptron_training.html" class="sidebar-item-text sidebar-link">
+  <a href="../../classical_perceptron_training.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Perceptron Training Algorithm</span></a>
   </div>
 </li>
@@ -129,40 +161,40 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./Week/Week2/week2.html" class="sidebar-item-text sidebar-link">
+            <a href="../../Week/Week2/week2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week2</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week/Week2/boolean.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Week/Week2/boolean.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Boolean Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week/Week2/represent_boolean.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Week/Week2/represent_boolean.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Boolean Implementation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week/Week2/sigmoid.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Week/Week2/sigmoid.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sigmoid Neuron</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week/Week2/taylor_gd.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Week/Week2/taylor_gd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Taylor Series</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week/Week2/gd.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Week/Week2/gd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gradient Descent</span></a>
   </div>
 </li>
@@ -177,15 +209,30 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#boolean-inputs-and-boolean-output" id="toc-boolean-inputs-and-boolean-output" class="nav-link active" data-scroll-target="#boolean-inputs-and-boolean-output">Boolean Inputs and Boolean Output</a>
+  <ul class="collapse">
+  <li><a href="#case-1" id="toc-case-1" class="nav-link" data-scroll-target="#case-1"><strong>Case 1</strong></a></li>
+  <li><a href="#case-2" id="toc-case-2" class="nav-link" data-scroll-target="#case-2"><strong>Case 2</strong></a></li>
+  <li><a href="#case-3" id="toc-case-3" class="nav-link" data-scroll-target="#case-3"><strong>Case 3</strong></a></li>
+  <li><a href="#case-4" id="toc-case-4" class="nav-link" data-scroll-target="#case-4"><strong>Case 4</strong></a></li>
+  </ul></li>
+  <li><a href="#no.-of-boolean-functions" id="toc-no.-of-boolean-functions" class="nav-link" data-scroll-target="#no.-of-boolean-functions"><strong>No.&nbsp;of Boolean Functions</strong></a></li>
+  <li><a href="#how-many-linearly-seprable" id="toc-how-many-linearly-seprable" class="nav-link" data-scroll-target="#how-many-linearly-seprable"><strong>How many Linearly Seprable</strong></a></li>
+  <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question"><strong>Question</strong></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Week/Week2/week2.html">Week2</a></li><li class="breadcrumb-item"><a href="../../Week/Week2/boolean.html">Boolean Functions</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week1 - Perceptron</h1>
+<h1 class="title">Boolean Functions</h1>
 </div>
 
 
@@ -202,16 +249,321 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<hr>
-<section id="perceptron-is-the-foundation-of-deep-learning." class="level5">
-<h5 class="anchored" data-anchor-id="perceptron-is-the-foundation-of-deep-learning.">Perceptron is the foundation of deep learning.</h5>
+<section id="boolean-inputs-and-boolean-output" class="level2">
+<h2 class="anchored" data-anchor-id="boolean-inputs-and-boolean-output">Boolean Inputs and Boolean Output</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A["Multiple Inputs (0,1)"] --&gt; B(Processing) --&gt; C["Single Output (0,1)"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<section id="case-1" class="level3">
+<h3 class="anchored" data-anchor-id="case-1"><strong>Case 1</strong></h3>
+<p><strong>Input</strong>: <span class="math inline">\(\{0,1\}^0\)</span> <br> <strong>Output</strong>: <span class="math inline">\(\{0,1\}\)</span></p>
+<div style="overflow-x: auto;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Input</th>
+<th style="text-align: left;"><span class="math inline">\(f_1\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(f_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\phi\)</span></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
-<section id="lets-build-intuitions" class="level5">
-<h5 class="anchored" data-anchor-id="lets-build-intuitions">Let’s build intuitions</h5>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/6pcbdESqBEQ" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<hr>
-<p>There are <em>summary notes</em> and other weeks content too.</p>
-<p>Use <em>top document symbol</em> to open navigation bar to navigate to other contents.</p>
+<section id="case-2" class="level3">
+<h3 class="anchored" data-anchor-id="case-2"><strong>Case 2</strong></h3>
+<p><strong>Input</strong>: <span class="math inline">\(\{0,1\}^1\)</span> <br> <strong>Output</strong>: <span class="math inline">\(\{0,1\}\)</span></p>
+<div style="overflow-x: auto;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Input</th>
+<th><span class="math inline">\(f_1\)</span></th>
+<th><span class="math inline">\(f_2\)</span></th>
+<th><span class="math inline">\(f_3\)</span></th>
+<th><span class="math inline">\(f_4\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="case-3" class="level3">
+<h3 class="anchored" data-anchor-id="case-3"><strong>Case 3</strong></h3>
+<p><strong>Input</strong>: <span class="math inline">\(\{0,1\}^2\)</span> <br> <strong>Output</strong>: <span class="math inline">\(\{0,1\}\)</span></p>
+<div style="overflow-x: auto;">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Input</th>
+<th><span class="math inline">\(f_1\)</span></th>
+<th><span class="math inline">\(f_2\)</span></th>
+<th><span class="math inline">\(f_3\)</span></th>
+<th><span class="math inline">\(f_4\)</span></th>
+<th><span class="math inline">\(f_5\)</span></th>
+<th><span class="math inline">\(f_6\)</span></th>
+<th><span class="math inline">\(f_7\)</span></th>
+<th><span class="math inline">\(f_8\)</span></th>
+<th><span class="math inline">\(f_9\)</span></th>
+<th><span class="math inline">\(f_{10}\)</span></th>
+<th><span class="math inline">\(f_{11}\)</span></th>
+<th><span class="math inline">\(f_{12}\)</span></th>
+<th><span class="math inline">\(f_{13}\)</span></th>
+<th><span class="math inline">\(f_{14}\)</span></th>
+<th><span class="math inline">\(f_{15}\)</span></th>
+<th><span class="math inline">\(f_{16}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(0, 0)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>(0, 1)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>(1, 0)</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>(1, 1)</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="case-4" class="level3">
+<h3 class="anchored" data-anchor-id="case-4"><strong>Case 4</strong></h3>
+<p><strong>Input</strong>: <span class="math inline">\(\{0,1\}^3\)</span> <br> <strong>Output</strong>: <span class="math inline">\(\{0,1\}\)</span></p>
+<div style="overflow-x: auto;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Input</th>
+<th><span class="math inline">\(f_1\)</span></th>
+<th><span class="math inline">\(f_2\)</span></th>
+<th><span class="math inline">\(f_3\)</span></th>
+<th>…</th>
+<th>…</th>
+<th><span class="math inline">\(f_{256}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(0, 0, 0)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>…</td>
+<td>…</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>(0, 0, 1)</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>…</td>
+<td>…</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>(0, 1, 0)</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>…</td>
+<td>…</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>(0, 1, 1)</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>…</td>
+<td>…</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>(1, 0, 0)</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>…</td>
+<td>…</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>(1, 0, 1)</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>…</td>
+<td>…</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>(1, 1, 0)</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>…</td>
+<td>…</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>(1, 1, 1)</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>…</td>
+<td>…</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Note</em>: For <strong>Case 4</strong>, there are <span class="math inline">\(2^{2^3} = 256\)</span> possible functions, so only a few examples are shown, with <code>...</code> to indicate the continuation.</p>
+</section>
+</section>
+<section id="no.-of-boolean-functions" class="level2">
+<h2 class="anchored" data-anchor-id="no.-of-boolean-functions"><strong>No.&nbsp;of Boolean Functions</strong></h2>
+<p><strong>If n boolean inputs</strong> then <strong><span class="math inline">\(2^{2^n}\)</span></strong> Boolean Functions Possible</p>
+</section>
+<section id="how-many-linearly-seprable" class="level2">
+<h2 class="anchored" data-anchor-id="how-many-linearly-seprable"><strong>How many Linearly Seprable</strong></h2>
+<ul>
+<li><strong>Case 1: n=0</strong> : All 2</li>
+<li><strong>Case 2: n=1</strong> : All 4</li>
+<li><strong>Case 3: n=2</strong> : <span class="math inline">\((16-2) = 14\)</span>, only <strong>XOR</strong> and <strong>!XOR</strong> are NonLinearlySeprable</li>
+<li><strong>For any General n</strong>: Manuall check required, no general formula</li>
+</ul>
+</section>
+<section id="question" class="level2">
+<h2 class="anchored" data-anchor-id="question"><strong>Question</strong></h2>
+<ol type="1">
+<li><p><strong>Why for n boolean inputs there exists <span class="math inline">\(2^{2^n}\)</span> boolean functions ?</strong></p>
+<details>
+<summary>
+<p>Answer</p>
+</summary>
+<p><strong>Watch My Summary or Assignment explanation video.</strong></p>
+</details></li>
+</ol>
 
 
 </section>

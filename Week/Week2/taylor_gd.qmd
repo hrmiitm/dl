@@ -1,0 +1,41 @@
+---
+title: "Taylor Series"
+format: html
+---
+
+## Taylor Series
+
+The Taylor series is a way to approximate a function around a known point \(a\) as:
+
+```{=latex}
+\begin{align*}
+  f(x) = f(a) + \frac{f'(a)}{1!}(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \cdots ...
+\end{align*}
+```
+
+Where:
+
+- **a** is a known value.
+- **x** is the value we want to approximate.
+
+### Example
+
+- $\sqrt{36} = 6$ , a=36
+- $\sqrt{35} = ?$, x=35
+- $f(x) = \sqrt{x}$
+- $f'(x) = \frac{1}{2*\sqrt{x}}$
+
+Using a linear approximation (first-order Taylor expansion):
+
+```{=latex}
+\begin{align*}
+f(35) \approx f(36) + f'(36)(35 - 36)
+
+ = 6 + \frac{1}{2*\sqrt{36}} * (-1)
+
+ = 5.916
+\end{align*}
+```
+
+
+---

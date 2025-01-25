@@ -29,9 +29,15 @@ website:
           - classical_perceptron.qmd
           - classical_perceptron_training.qmd
       - section: "Week2"
-        href: week2.qmd
+        href: Week/Week2/week2.qmd
         contents:
-          - "Coming Soon"
+          - Week/Week2/boolean.qmd
+          - Week/Week2/represent_boolean.qmd
+          - Week/Week2/sigmoid.qmd
+          - Week/Week2/taylor_gd.qmd
+          - Week/Week2/gd.qmd
+      - section: "Assignment 1 and 2"
+        href: Week/assignment1_2.qmd
       
 
 format:

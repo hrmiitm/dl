@@ -1,0 +1,36 @@
+---
+title: "Sigmoid Neuron"
+format: html
+---
+
+## Normal Neuron
+
+```{=latex}
+\begin{align*}
+  y = 
+    \begin{cases}
+        1, & \text{if } w^TX \geq \theta \\
+        0, & \text{otherwise}
+    \end{cases}
+\end{align*}
+```
+
+#### **Problem with It**
+
+- **Output**: it output only 0 or 1
+- **Weights**: it also says all 0 or 1 with same weight
+
+## Sigmoid neuron
+```{=latex}
+\begin{align*}
+  y = 
+    \begin{cases}
+        \frac{1}{1 + e^{-(w^T X)}}
+    \end{cases}
+\end{align*}
+```
+
+#### **How it is more useful?**
+
+- **Output**: $y \in (0,1)$
+- **Weights**: 0.1 can represent strong disagree and 0.4 can represent somewhat agree
