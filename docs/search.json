@@ -1,32 +1,108 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Week1 - Perceptron",
-    "section": "",
-    "text": "Perceptron is the foundation of deep learning.\n\n\nLet’s build intuitions\n\n\nThere are summary notes and other weeks content too.\nUse top document symbol to open navigation bar to navigate to other contents.",
-    "crumbs": [
-      "Week1"
-    ]
-  },
-  {
-    "objectID": "about_dl.html",
-    "href": "about_dl.html",
-    "title": "About The Course",
-    "section": "",
-    "text": "I am currently pursuing a deep learning course as part of my IITM program, complementing my learning journey by creating comprehensive notes and engaging video content. The course content is meticulously curated by me, Hritik Roshan Maurya (HRM), with help of IIT Madras content.\nHaving successfully completed my second year in 2024 with a CGPA of 9.2, I am now delving into deep learning in the January 2025 term. Through this initiative, I aim to document my learning experience while sharing valuable insights with others passionate about this field.",
-    "crumbs": [
-      "About The Course"
-    ]
-  },
-  {
     "objectID": "week2.html",
     "href": "week2.html",
     "title": "Week2",
     "section": "",
-    "text": "I am also learning along with you\n\nKindly wait content will be uploaded before quizes.",
+    "text": "I am also learning along with you\n\nKindly wait content will be uploaded before quizes."
+  },
+  {
+    "objectID": "Week/Week2/taylor_gd.html",
+    "href": "Week/Week2/taylor_gd.html",
+    "title": "Taylor Series",
+    "section": "",
+    "text": "The Taylor series is a way to approximate a function around a known point (a) as:\n\\[\\begin{align*}\n  f(x) = f(a) + \\frac{f'(a)}{1!}(x - a) + \\frac{f''(a)}{2!}(x - a)^2 + \\cdots ...\n\\end{align*}\\]\nWhere:\n\na is a known value.\nx is the value we want to approximate.\n\n\n\n\n\\(\\sqrt{36} = 6\\) , a=36\n\\(\\sqrt{35} = ?\\), x=35\n\\(f(x) = \\sqrt{x}\\)\n\\(f'(x) = \\frac{1}{2*\\sqrt{x}}\\)\n\nUsing a linear approximation (first-order Taylor expansion):\n\\[\\begin{align*}\nf(35) \\approx f(36) + f'(36)(35 - 36)\n\n= 6 + \\frac{1}{2*\\sqrt{36}} * (-1)\n\n= 5.916\n\\end{align*}\\]",
     "crumbs": [
-      "Week2"
+      "Week2",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "Week/Week2/taylor_gd.html#taylor-series",
+    "href": "Week/Week2/taylor_gd.html#taylor-series",
+    "title": "Taylor Series",
+    "section": "",
+    "text": "The Taylor series is a way to approximate a function around a known point (a) as:\n\\[\\begin{align*}\n  f(x) = f(a) + \\frac{f'(a)}{1!}(x - a) + \\frac{f''(a)}{2!}(x - a)^2 + \\cdots ...\n\\end{align*}\\]\nWhere:\n\na is a known value.\nx is the value we want to approximate.\n\n\n\n\n\\(\\sqrt{36} = 6\\) , a=36\n\\(\\sqrt{35} = ?\\), x=35\n\\(f(x) = \\sqrt{x}\\)\n\\(f'(x) = \\frac{1}{2*\\sqrt{x}}\\)\n\nUsing a linear approximation (first-order Taylor expansion):\n\\[\\begin{align*}\nf(35) \\approx f(36) + f'(36)(35 - 36)\n\n= 6 + \\frac{1}{2*\\sqrt{36}} * (-1)\n\n= 5.916\n\\end{align*}\\]",
+    "crumbs": [
+      "Week2",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "Week/Week2/represent_boolean.html",
+    "href": "Week/Week2/represent_boolean.html",
+    "title": "Boolean Implementation",
+    "section": "",
+    "text": "Can we implement any Boolean function with single perceptron?\n\n\nAnswer\n\nAnswer: No, Single Perceptron can only separate Linearly Separable Inputs.\n\nCan non linearly separable boolean function be implemented with multiple perceptron? How?\n\n\nAnswer\n\nAnswer: Yes, with \\(2^n + 1\\) perceptron and 3 layers(input, hidden(\\(2^n\\)), output(1)) we can definetely implement. Note: With less than \\(2^n+1\\), is also possible\n\nDo you have intution that how perceptron that linearly separate is now able to separate even non-linearly seprable boolean inputs?\n\n\nAnswer\n\nAnswer: If No then watch my summary video.\n\nCan non linearly separable boolean function be implemented with multiple perceptron? How?\n\n\nAnswer\n\nAnswer: Yes, with \\(2^n + 1\\) perceptron and 3 layers(input, hidden(\\(2^n\\)), output(1)) we can definetely implement. Note: With less than \\(2^n+1\\), is also possible\n\nWhat is minimum no. of neuron are required to implement XOR boolean function?\n\n\nAnswer\n\nAnswer: 3, with \\(2^2+1 = 5\\) we can definitely do, but question asks for minimum, and with just 3 we can implement boolean function.",
+    "crumbs": [
+      "Week2",
+      "Boolean Implementation"
+    ]
+  },
+  {
+    "objectID": "Week/Week2/represent_boolean.html#questions",
+    "href": "Week/Week2/represent_boolean.html#questions",
+    "title": "Boolean Implementation",
+    "section": "",
+    "text": "Can we implement any Boolean function with single perceptron?\n\n\nAnswer\n\nAnswer: No, Single Perceptron can only separate Linearly Separable Inputs.\n\nCan non linearly separable boolean function be implemented with multiple perceptron? How?\n\n\nAnswer\n\nAnswer: Yes, with \\(2^n + 1\\) perceptron and 3 layers(input, hidden(\\(2^n\\)), output(1)) we can definetely implement. Note: With less than \\(2^n+1\\), is also possible\n\nDo you have intution that how perceptron that linearly separate is now able to separate even non-linearly seprable boolean inputs?\n\n\nAnswer\n\nAnswer: If No then watch my summary video.\n\nCan non linearly separable boolean function be implemented with multiple perceptron? How?\n\n\nAnswer\n\nAnswer: Yes, with \\(2^n + 1\\) perceptron and 3 layers(input, hidden(\\(2^n\\)), output(1)) we can definetely implement. Note: With less than \\(2^n+1\\), is also possible\n\nWhat is minimum no. of neuron are required to implement XOR boolean function?\n\n\nAnswer\n\nAnswer: 3, with \\(2^2+1 = 5\\) we can definitely do, but question asks for minimum, and with just 3 we can implement boolean function.",
+    "crumbs": [
+      "Week2",
+      "Boolean Implementation"
+    ]
+  },
+  {
+    "objectID": "Week/Week2/boolean.html",
+    "href": "Week/Week2/boolean.html",
+    "title": "Boolean Functions",
+    "section": "",
+    "text": "flowchart LR\n  A[\"Multiple Inputs (0,1)\"] --&gt; B(Processing) --&gt; C[\"Single Output (0,1)\"]\n\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^0\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\n\n\n\n\\(\\phi\\)\n0\n1\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^1\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\\(f_3\\)\n\\(f_4\\)\n\n\n\n\n0\n0\n0\n1\n1\n\n\n1\n0\n1\n0\n1\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^2\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\\(f_3\\)\n\\(f_4\\)\n\\(f_5\\)\n\\(f_6\\)\n\\(f_7\\)\n\\(f_8\\)\n\\(f_9\\)\n\\(f_{10}\\)\n\\(f_{11}\\)\n\\(f_{12}\\)\n\\(f_{13}\\)\n\\(f_{14}\\)\n\\(f_{15}\\)\n\\(f_{16}\\)\n\n\n\n\n(0, 0)\n0\n0\n0\n0\n0\n0\n0\n0\n1\n1\n1\n1\n1\n1\n1\n1\n\n\n(0, 1)\n0\n0\n0\n0\n1\n1\n1\n1\n0\n0\n0\n0\n1\n1\n1\n1\n\n\n(1, 0)\n0\n0\n1\n1\n0\n0\n1\n1\n0\n0\n1\n1\n0\n0\n1\n1\n\n\n(1, 1)\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^3\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\\(f_3\\)\n…\n…\n\\(f_{256}\\)\n\n\n\n\n(0, 0, 0)\n0\n0\n0\n…\n…\n1\n\n\n(0, 0, 1)\n0\n0\n1\n…\n…\n1\n\n\n(0, 1, 0)\n0\n1\n0\n…\n…\n1\n\n\n(0, 1, 1)\n0\n1\n1\n…\n…\n1\n\n\n(1, 0, 0)\n1\n0\n0\n…\n…\n1\n\n\n(1, 0, 1)\n1\n0\n1\n…\n…\n1\n\n\n(1, 1, 0)\n1\n1\n0\n…\n…\n1\n\n\n(1, 1, 1)\n1\n1\n1\n…\n…\n1\n\n\n\n\nNote: For Case 4, there are \\(2^{2^3} = 256\\) possible functions, so only a few examples are shown, with ... to indicate the continuation.",
+    "crumbs": [
+      "Week2",
+      "Boolean Functions"
+    ]
+  },
+  {
+    "objectID": "Week/Week2/boolean.html#boolean-inputs-and-boolean-output",
+    "href": "Week/Week2/boolean.html#boolean-inputs-and-boolean-output",
+    "title": "Boolean Functions",
+    "section": "",
+    "text": "flowchart LR\n  A[\"Multiple Inputs (0,1)\"] --&gt; B(Processing) --&gt; C[\"Single Output (0,1)\"]\n\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^0\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\n\n\n\n\\(\\phi\\)\n0\n1\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^1\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\\(f_3\\)\n\\(f_4\\)\n\n\n\n\n0\n0\n0\n1\n1\n\n\n1\n0\n1\n0\n1\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^2\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\\(f_3\\)\n\\(f_4\\)\n\\(f_5\\)\n\\(f_6\\)\n\\(f_7\\)\n\\(f_8\\)\n\\(f_9\\)\n\\(f_{10}\\)\n\\(f_{11}\\)\n\\(f_{12}\\)\n\\(f_{13}\\)\n\\(f_{14}\\)\n\\(f_{15}\\)\n\\(f_{16}\\)\n\n\n\n\n(0, 0)\n0\n0\n0\n0\n0\n0\n0\n0\n1\n1\n1\n1\n1\n1\n1\n1\n\n\n(0, 1)\n0\n0\n0\n0\n1\n1\n1\n1\n0\n0\n0\n0\n1\n1\n1\n1\n\n\n(1, 0)\n0\n0\n1\n1\n0\n0\n1\n1\n0\n0\n1\n1\n0\n0\n1\n1\n\n\n(1, 1)\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^3\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\\(f_3\\)\n…\n…\n\\(f_{256}\\)\n\n\n\n\n(0, 0, 0)\n0\n0\n0\n…\n…\n1\n\n\n(0, 0, 1)\n0\n0\n1\n…\n…\n1\n\n\n(0, 1, 0)\n0\n1\n0\n…\n…\n1\n\n\n(0, 1, 1)\n0\n1\n1\n…\n…\n1\n\n\n(1, 0, 0)\n1\n0\n0\n…\n…\n1\n\n\n(1, 0, 1)\n1\n0\n1\n…\n…\n1\n\n\n(1, 1, 0)\n1\n1\n0\n…\n…\n1\n\n\n(1, 1, 1)\n1\n1\n1\n…\n…\n1\n\n\n\n\nNote: For Case 4, there are \\(2^{2^3} = 256\\) possible functions, so only a few examples are shown, with ... to indicate the continuation.",
+    "crumbs": [
+      "Week2",
+      "Boolean Functions"
+    ]
+  },
+  {
+    "objectID": "Week/Week2/boolean.html#no.-of-boolean-functions",
+    "href": "Week/Week2/boolean.html#no.-of-boolean-functions",
+    "title": "Boolean Functions",
+    "section": "No. of Boolean Functions",
+    "text": "No. of Boolean Functions\nIf n boolean inputs then \\(2^{2^n}\\) Boolean Functions Possible",
+    "crumbs": [
+      "Week2",
+      "Boolean Functions"
+    ]
+  },
+  {
+    "objectID": "Week/Week2/boolean.html#how-many-linearly-seprable",
+    "href": "Week/Week2/boolean.html#how-many-linearly-seprable",
+    "title": "Boolean Functions",
+    "section": "How many Linearly Seprable",
+    "text": "How many Linearly Seprable\n\nCase 1: n=0 : All 2\nCase 2: n=1 : All 4\nCase 3: n=2 : \\((16-2) = 14\\), only XOR and !XOR are NonLinearlySeprable\nFor any General n: Manuall check required, no general formula",
+    "crumbs": [
+      "Week2",
+      "Boolean Functions"
+    ]
+  },
+  {
+    "objectID": "Week/Week2/boolean.html#question",
+    "href": "Week/Week2/boolean.html#question",
+    "title": "Boolean Functions",
+    "section": "Question",
+    "text": "Question\n\nWhy for n boolean inputs there exists \\(2^{2^n}\\) boolean functions ?\n\n\nAnswer\n\nWatch My Summary or Assignment explanation video.",
+    "crumbs": [
+      "Week2",
+      "Boolean Functions"
     ]
   },
   {
@@ -41,47 +117,14 @@
     ]
   },
   {
-    "objectID": "mcculloch_pits.html#biological-neuron",
-    "href": "mcculloch_pits.html#biological-neuron",
-    "title": "Biology to McCulloch & Pits",
-    "section": "Biological Neuron",
-    "text": "Biological Neuron",
-    "crumbs": [
-      "Week1",
-      "Biology to McCulloch & Pits"
-    ]
-  },
-  {
-    "objectID": "mcculloch_pits.html#mccullochneuroscientist-pitslogician",
-    "href": "mcculloch_pits.html#mccullochneuroscientist-pitslogician",
-    "title": "Biology to McCulloch & Pits",
-    "section": "McCulloch(Neuroscientist) & Pits(Logician)",
-    "text": "McCulloch(Neuroscientist) & Pits(Logician)\n\nInputs(0,1) \\(\\longrightarrow\\)  \\(\\longrightarrow\\) Output(0,1)\n\nThanks, If any disperency or suggestion. Feel free to report me.",
-    "crumbs": [
-      "Week1",
-      "Biology to McCulloch & Pits"
-    ]
-  },
-  {
-    "objectID": "mcculloch_pits.html#types-and-terminology",
-    "href": "mcculloch_pits.html#types-and-terminology",
-    "title": "Biology to McCulloch & Pits",
+    "objectID": "mcculloch_pits.html#biological-neuron-vs-artificial-neuron",
+    "href": "mcculloch_pits.html#biological-neuron-vs-artificial-neuron",
+    "title": "McCulloch & Pitts",
     "section": "",
-    "text": "If any one of these is active (1), then the output will always be 0.\n\nRepresents signals that stop or inhibit action.\n\n\n\n\n\nIf any one of these is active (1), it pushes toward an output of 1.\n\nRepresents signals that encourage activation.\n\n\n\n\n\nThis is the barrier that needs to be crossed by excitatory input to produce an output of 1.\n\nExample:\n\nSuppose you’re deciding whether to buy a product.\n\nIf the threshold is ₹100, you need to have at least ₹100 from any source (inputs) to proceed with the purchase.",
+    "text": "Artificial neurons are inspired by biological neurons, but there are significant differences between them:\n\n\n\nEfficiency\n\nThe human brain contains approximately 100 billion neurons and consumes about 20 watts of power.\nSimple artificial neural networks can consume power in the range of kilowatts to megawatts, making them far less efficient.\n\nProcessing Mechanism\n\nBiological neurons process signals through complex, largely unknown mechanisms in the soma and other parts of the neuron.\nArtificial neurons process signals using straightforward mathematical functions and weighted sums.\n\n\n\n\n\n\nInspiration\n\nBoth biological and artificial neurons are based on the concept of processing and transmitting signals.\nThey use inputs (stimuli for biological neurons, numerical values for artificial neurons) and generate outputs (responses or activations).\n\nInterconnected Systems\n\nBiological neurons connect through synapses to form neural networks in the brain.\nArtificial neurons are interconnected in layers to form artificial neural networks.\n\nLearning and Adaptation\n\nBiological neurons adapt through synaptic plasticity (e.g., Hebbian learning).\nArtificial neurons adapt by updating weights using algorithms such as gradient descent.\n\n\n\nBy understanding both the differences and similarities, we can better appreciate the capabilities and limitations of artificial neurons compared to their biological counterparts.",
     "crumbs": [
       "Week1",
-      "Biology to McCulloch & Pits"
-    ]
-  },
-  {
-    "objectID": "mcculloch_pits.html#visual-representation-of-the-neuron",
-    "href": "mcculloch_pits.html#visual-representation-of-the-neuron",
-    "title": "Biology to McCulloch & Pits",
-    "section": "Visual Representation of the Neuron",
-    "text": "Visual Representation of the Neuron\n```mermaid graph LR A[Inputs (0,1)] –&gt;|Excitatory/Inhibitory| B(Circle: Processing Node) B –&gt; C[Output (0,1)]\nThanks, If any disperency or suggestion. Feel free to report me.",
-    "crumbs": [
-      "Week1",
-      "Biology to McCulloch & Pits"
+      "McCulloch & Pitts"
     ]
   },
   {
@@ -107,14 +150,46 @@
     ]
   },
   {
-    "objectID": "mcculloch_pits.html#biological-neuron-vs-artificial-neuron",
-    "href": "mcculloch_pits.html#biological-neuron-vs-artificial-neuron",
-    "title": "McCulloch & Pitts",
+    "objectID": "classical_perceptron_training.html",
+    "href": "classical_perceptron_training.html",
+    "title": "Perceptron Training Algorithm",
     "section": "",
-    "text": "Artificial neurons are inspired by biological neurons, but there are significant differences between them:\n\n\n\nEfficiency\n\nThe human brain contains approximately 100 billion neurons and consumes about 20 watts of power.\nSimple artificial neural networks can consume power in the range of kilowatts to megawatts, making them far less efficient.\n\nProcessing Mechanism\n\nBiological neurons process signals through complex, largely unknown mechanisms in the soma and other parts of the neuron.\nArtificial neurons process signals using straightforward mathematical functions and weighted sums.\n\n\n\n\n\n\nInspiration\n\nBoth biological and artificial neurons are based on the concept of processing and transmitting signals.\nThey use inputs (stimuli for biological neurons, numerical values for artificial neurons) and generate outputs (responses or activations).\n\nInterconnected Systems\n\nBiological neurons connect through synapses to form neural networks in the brain.\nArtificial neurons are interconnected in layers to form artificial neural networks.\n\nLearning and Adaptation\n\nBiological neurons adapt through synaptic plasticity (e.g., Hebbian learning).\nArtificial neurons adapt by updating weights using algorithms such as gradient descent.\n\n\n\nBy understanding both the differences and similarities, we can better appreciate the capabilities and limitations of artificial neurons compared to their biological counterparts.",
+    "text": "We now know how perceptron predicts.\nInput is given by the situation, but what will be weights? Weights can be computed by given some input data and labels, and then our perceptron algorithm will learn most appropriate weights.",
     "crumbs": [
       "Week1",
-      "McCulloch & Pitts"
+      "Perceptron Training Algorithm"
+    ]
+  },
+  {
+    "objectID": "classical_perceptron_training.html#perceptron-learning-algorithm",
+    "href": "classical_perceptron_training.html#perceptron-learning-algorithm",
+    "title": "Perceptron Training Algorithm",
+    "section": "Perceptron Learning Algorithm",
+    "text": "Perceptron Learning Algorithm\nGiven data:\n\nInputs: [(2,0), (2,1), (0,1), (-2,0), (-2,-2), (0,-2)]\nOutputs: ([1, 1, 1, 0, 0, 0])\n\n\nSteps to Compute/Learn Weights\n\nInitialize the weight vector randomly e.g. \\(w = (-1,1)\\)\nRepeat until convergence:\n\nPick any input point, say \\(p\\).\nIf the weight vector classifies \\(p\\) incorrectly:\n\nAdjust the weight vector using the rules below.\n\n\n\n\n\nRules to Adjust Weights\n\\[\\begin{align*}\nw_{\\text{new}} =\n\\begin{cases}\n    w + p, & \\text{if } p \\in \\text{+ve(1) and } w^T x &lt; 0, \\\\\n    w - p, & \\text{if } p \\in \\text{-ve(0) and } w^T x \\geq 0, \\\\\n    w, & \\text{else}.\n\\end{cases}\n\\end{align*}\\]\n\n\nCaution\nWhile updating weights etc we should account for bias term also.\n\n\\(w = [1, x_{corr}, y_{corr}]\\)\n\\(x = [1, x_{corr}, y_{corr}]\\)",
+    "crumbs": [
+      "Week1",
+      "Perceptron Training Algorithm"
+    ]
+  },
+  {
+    "objectID": "classical_perceptron_training.html#practice",
+    "href": "classical_perceptron_training.html#practice",
+    "title": "Perceptron Training Algorithm",
+    "section": "Practice",
+    "text": "Practice\nQuestion) Calculate the weight vector using above mentioned algorithm\n\nGiven data:\n\nInputs: [(2,0), (2,1), (0,1), (-2,0), (-2,-2), (0,-2)]\nOutputs: ([1, 1, 1, 0, 0, 0])\n\n\n\n\nAnswer\n\nAnswer: Watch Youtube Vedio",
+    "crumbs": [
+      "Week1",
+      "Perceptron Training Algorithm"
+    ]
+  },
+  {
+    "objectID": "about_dl.html",
+    "href": "about_dl.html",
+    "title": "About The Course",
+    "section": "",
+    "text": "I am currently pursuing a deep learning course as part of my IITM program, complementing my learning journey by creating comprehensive notes and engaging video content. The course content is meticulously curated by me, Hritik Roshan Maurya (HRM), with help of IIT Madras content.\nHaving successfully completed my second year in 2024 with a CGPA of 9.2, I am now delving into deep learning in the January 2025 term. Through this initiative, I aim to document my learning experience while sharing valuable insights with others passionate about this field.",
+    "crumbs": [
+      "About The Course"
     ]
   },
   {
@@ -162,17 +237,6 @@
     ]
   },
   {
-    "objectID": "classical_perceptron.html#framing-the-problem-in-perceptron-form",
-    "href": "classical_perceptron.html#framing-the-problem-in-perceptron-form",
-    "title": "Classical Perceptron Model",
-    "section": "Framing the Problem in Perceptron Form",
-    "text": "Framing the Problem in Perceptron Form\n\n\nWhat is the bias (\\(w_0\\))?\n\n\nAnswer\n\nAnswer: 100. The bias is 100 because the total money aggregated must be at least 100 to buy any book, as the minimum price of a book is 100.\n\nWhat are the corresponding weights for all inputs?\n\n\nAnswer\n\n\n\\(x_1\\) (isFatherGaveMoney): +40\n\n\\(x_2\\) (isMotherGaveMoney): +70\n\\(x_3\\)(brotherGaveMoney`): +1\n\\(x_4\\) (iGiveToJuice): -20\n\n\n\nWhat is the final mathematical function?\n\n\nAnswer\n\n\\(y = \\begin{cases} 1, & \\text{if } 100 + 40x_1 + 70x_2 + x_3 - 20x_4 \\geq 0 \\\\ 0, & \\text{otherwise} \\end{cases}\\)",
-    "crumbs": [
-      "Week1",
-      "Classical Perceptron Model"
-    ]
-  },
-  {
     "objectID": "classical_perceptron.html#lets-understand-working",
     "href": "classical_perceptron.html#lets-understand-working",
     "title": "Classical Perceptron Model",
@@ -184,145 +248,45 @@
     ]
   },
   {
-    "objectID": "classical_perceptron_training.html",
-    "href": "classical_perceptron_training.html",
-    "title": "Perceptron Training Algorithm",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Week1 - Perceptron",
     "section": "",
-    "text": "We now know how perceptron predicts.\nInput is given by the situation, but what will be weights? Weights can be computed by given some input data and labels, and then our perceptron algorithm will learn most appropriate weights.",
+    "text": "Perceptron is the foundation of deep learning.\n\n\nLet’s build intuitions\n\n\nThere are summary notes and other weeks content too.\nUse top document symbol to open navigation bar to navigate to other contents.",
     "crumbs": [
-      "Week1",
-      "Perceptron Training Algorithm"
+      "Week1"
     ]
   },
   {
-    "objectID": "classical_perceptron_training.html#perceptron-learning-algorithm",
-    "href": "classical_perceptron_training.html#perceptron-learning-algorithm",
-    "title": "Perceptron Training Algorithm",
-    "section": "Perceptron Learning Algorithm",
-    "text": "Perceptron Learning Algorithm\nGiven data:\n\nInputs: [(2,0), (2,1), (0,1), (-2,0), (-2,-2), (0,-2)]\nOutputs: ([1, 1, 1, 0, 0, 0])\n\n\nSteps to Compute/Learn Weights\n\nInitialize the weight vector randomly e.g. \\(w = (-1,1)\\)\nRepeat until convergence:\n\nPick any input point, say \\(p\\).\nIf the weight vector classifies \\(p\\) incorrectly:\n\nAdjust the weight vector using the rules below.\n\n\n\n\n\nRules to Adjust Weights\n\\[\\begin{align*}\nw_{\\text{new}} =\n\\begin{cases}\n    w + p, & \\text{if } p \\in \\text{+ve(1) and } w^T x &lt; 0, \\\\\n    w - p, & \\text{if } p \\in \\text{-ve(0) and } w^T x \\geq 0, \\\\\n    w, & \\text{else}.\n\\end{cases}\n\\end{align*}\\]\n\n\nCaution\nWhile updating weights etc we should account for bias term also.\n\n\\(w = [1, x_{corr}, y_{corr}]\\)\n\\(x = [1, x_{corr}, y_{corr}]\\)",
-    "crumbs": [
-      "Week1",
-      "Perceptron Training Algorithm"
-    ]
-  },
-  {
-    "objectID": "classical_perceptron_training.html#homework",
-    "href": "classical_perceptron_training.html#homework",
-    "title": "Perceptron Training Algorithm",
-    "section": "HomeWork",
-    "text": "HomeWork\nQuestion) Calculate the weight vector from above mentioned algorithm\n\n\nAnswer\n\nAnswer: Watch Youtube Vedio",
-    "crumbs": [
-      "Week1",
-      "Perceptron Training Algorithm"
-    ]
-  },
-  {
-    "objectID": "classical_perceptron_training.html#practice",
-    "href": "classical_perceptron_training.html#practice",
-    "title": "Perceptron Training Algorithm",
-    "section": "Practice",
-    "text": "Practice\nQuestion) Calculate the weight vector using above mentioned algorithm\n\nGiven data:\n\nInputs: [(2,0), (2,1), (0,1), (-2,0), (-2,-2), (0,-2)]\nOutputs: ([1, 1, 1, 0, 0, 0])\n\n\n\n\nAnswer\n\nAnswer: Watch Youtube Vedio",
-    "crumbs": [
-      "Week1",
-      "Perceptron Training Algorithm"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/week2.html",
-    "href": "Week/Week2/week2.html",
-    "title": "Week2 - More On Perceptron",
+    "objectID": "Week/assignment1_2.html",
+    "href": "Week/assignment1_2.html",
+    "title": "AssignmentQuestions",
     "section": "",
-    "text": "There are summary notes and other weeks content too.\nUse top document symbol to open navigation bar to navigate to other contents.",
+    "text": "Coming Soon before deadline",
     "crumbs": [
-      "Week2"
+      "Assignment 1 and 2"
     ]
   },
   {
-    "objectID": "Week/Week2/boolean.html",
-    "href": "Week/Week2/boolean.html",
-    "title": "Boolean Functions",
+    "objectID": "Week/Week2/gd.html",
+    "href": "Week/Week2/gd.html",
+    "title": "Gradient Descent",
     "section": "",
-    "text": "flowchart LR\n  A[\"Multiple Inputs (0,1)\"] --&gt; B(Processing) --&gt; C[\"Single Output (0,1)\"]\n\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^0\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\n\n\n\n\\(\\phi\\)\n0\n1\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^1\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\\(f_3\\)\n\\(f_4\\)\n\n\n\n\n0\n0\n0\n1\n1\n\n\n1\n0\n1\n0\n1\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^2\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\\(f_3\\)\n\\(f_4\\)\n\\(f_5\\)\n\\(f_6\\)\n\\(f_7\\)\n\\(f_8\\)\n\\(f_9\\)\n\\(f_{10}\\)\n\\(f_{11}\\)\n\\(f_{12}\\)\n\\(f_{13}\\)\n\\(f_{14}\\)\n\\(f_{15}\\)\n\\(f_{16}\\)\n\n\n\n\n(0, 0)\n0\n0\n0\n0\n0\n0\n0\n0\n1\n1\n1\n1\n1\n1\n1\n1\n\n\n(0, 1)\n0\n0\n0\n0\n1\n1\n1\n1\n0\n0\n0\n0\n1\n1\n1\n1\n\n\n(1, 0)\n0\n0\n1\n1\n0\n0\n1\n1\n0\n0\n1\n1\n0\n0\n1\n1\n\n\n(1, 1)\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^3\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\\(f_3\\)\n…\n…\n\\(f_{256}\\)\n\n\n\n\n(0, 0, 0)\n0\n0\n0\n…\n…\n1\n\n\n(0, 0, 1)\n0\n0\n1\n…\n…\n1\n\n\n(0, 1, 0)\n0\n1\n0\n…\n…\n1\n\n\n(0, 1, 1)\n0\n1\n1\n…\n…\n1\n\n\n(1, 0, 0)\n1\n0\n0\n…\n…\n1\n\n\n(1, 0, 1)\n1\n0\n1\n…\n…\n1\n\n\n(1, 1, 0)\n1\n1\n0\n…\n…\n1\n\n\n(1, 1, 1)\n1\n1\n1\n…\n…\n1\n\n\n\n\nNote: For Case 4, there are \\(2^{2^3} = 256\\) possible functions, so only a few examples are shown, with ... to indicate the continuation.",
+    "text": "from math import e\ndef f(x,w,b): # sigmoid\n    val = (w*x)+b\n    return 1/(1+e**(-val))\n\n\n\n\ndef dw(w,b):\n    my_sum = 0\n    for x,y in data.items():\n        fval = f(x,w,b)\n        my_sum += (fval-y)*fval*(1-fval)*x\n    return my_sum\n\ndef db(w,b):\n    my_sum = 0\n    for x,y in data.items():\n        fval = f(x,w,b)\n        my_sum += (fval-y)*fval*(1-fval)\n    return my_sum\n\n\n\n\ndef gd(w, b, eta=1, epoch=3):\n    while epoch&gt;0:\n        (w,b) = (w - eta*dw(w,b)/2, b - eta*db(w,b)/2)\n        epoch -= 1\n    return (w,b)\n\n\ndata = {0.5:0.2, 2.5:0.9}\ngd(-2,-2,1,1000)\n\n(1.78460843762914, -2.2720512289757773)",
     "crumbs": [
       "Week2",
-      "Boolean Functions"
+      "Gradient Descent"
     ]
   },
   {
-    "objectID": "Week/Week2/boolean.html#boolean-inputs-and-boolean-output",
-    "href": "Week/Week2/boolean.html#boolean-inputs-and-boolean-output",
-    "title": "Boolean Functions",
+    "objectID": "Week/Week2/gd.html#minimize-losswb-sum-frac12fxwb---y2",
+    "href": "Week/Week2/gd.html#minimize-losswb-sum-frac12fxwb---y2",
+    "title": "Gradient Descent",
     "section": "",
-    "text": "flowchart LR\n  A[\"Multiple Inputs (0,1)\"] --&gt; B(Processing) --&gt; C[\"Single Output (0,1)\"]\n\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^0\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\n\n\n\n\\(\\phi\\)\n0\n1\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^1\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\\(f_3\\)\n\\(f_4\\)\n\n\n\n\n0\n0\n0\n1\n1\n\n\n1\n0\n1\n0\n1\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^2\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\\(f_3\\)\n\\(f_4\\)\n\\(f_5\\)\n\\(f_6\\)\n\\(f_7\\)\n\\(f_8\\)\n\\(f_9\\)\n\\(f_{10}\\)\n\\(f_{11}\\)\n\\(f_{12}\\)\n\\(f_{13}\\)\n\\(f_{14}\\)\n\\(f_{15}\\)\n\\(f_{16}\\)\n\n\n\n\n(0, 0)\n0\n0\n0\n0\n0\n0\n0\n0\n1\n1\n1\n1\n1\n1\n1\n1\n\n\n(0, 1)\n0\n0\n0\n0\n1\n1\n1\n1\n0\n0\n0\n0\n1\n1\n1\n1\n\n\n(1, 0)\n0\n0\n1\n1\n0\n0\n1\n1\n0\n0\n1\n1\n0\n0\n1\n1\n\n\n(1, 1)\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n\n\n\n\n\n\n\nInput: \\(\\{0,1\\}^3\\)  Output: \\(\\{0,1\\}\\)\n\n\n\n\nInput\n\\(f_1\\)\n\\(f_2\\)\n\\(f_3\\)\n…\n…\n\\(f_{256}\\)\n\n\n\n\n(0, 0, 0)\n0\n0\n0\n…\n…\n1\n\n\n(0, 0, 1)\n0\n0\n1\n…\n…\n1\n\n\n(0, 1, 0)\n0\n1\n0\n…\n…\n1\n\n\n(0, 1, 1)\n0\n1\n1\n…\n…\n1\n\n\n(1, 0, 0)\n1\n0\n0\n…\n…\n1\n\n\n(1, 0, 1)\n1\n0\n1\n…\n…\n1\n\n\n(1, 1, 0)\n1\n1\n0\n…\n…\n1\n\n\n(1, 1, 1)\n1\n1\n1\n…\n…\n1\n\n\n\n\nNote: For Case 4, there are \\(2^{2^3} = 256\\) possible functions, so only a few examples are shown, with ... to indicate the continuation.",
+    "text": "from math import e\ndef f(x,w,b): # sigmoid\n    val = (w*x)+b\n    return 1/(1+e**(-val))\n\n\n\n\ndef dw(w,b):\n    my_sum = 0\n    for x,y in data.items():\n        fval = f(x,w,b)\n        my_sum += (fval-y)*fval*(1-fval)*x\n    return my_sum\n\ndef db(w,b):\n    my_sum = 0\n    for x,y in data.items():\n        fval = f(x,w,b)\n        my_sum += (fval-y)*fval*(1-fval)\n    return my_sum\n\n\n\n\ndef gd(w, b, eta=1, epoch=3):\n    while epoch&gt;0:\n        (w,b) = (w - eta*dw(w,b)/2, b - eta*db(w,b)/2)\n        epoch -= 1\n    return (w,b)\n\n\ndata = {0.5:0.2, 2.5:0.9}\ngd(-2,-2,1,1000)\n\n(1.78460843762914, -2.2720512289757773)",
     "crumbs": [
       "Week2",
-      "Boolean Functions"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/boolean.html#no-of-boolean-functions",
-    "href": "Week/Week2/boolean.html#no-of-boolean-functions",
-    "title": "Boolean Functions",
-    "section": "No of Boolean Functions",
-    "text": "No of Boolean Functions\nIf n boolean inputs then \\(2^{2^n}\\) Boolean Functions Possible",
-    "crumbs": [
-      "Week2",
-      "Boolean Functions"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/boolean.html#how-many-linearly-seprable",
-    "href": "Week/Week2/boolean.html#how-many-linearly-seprable",
-    "title": "Boolean Functions",
-    "section": "How many Linearly Seprable",
-    "text": "How many Linearly Seprable\n\nCase 1: n=0 : All 2\nCase 2: n=1 : All 4\nCase 3: n=2 : \\((16-2) = 14\\), only XOR and !XOR are NonLinearlySeprable\nFor any General n: Manuall check required, no general formula",
-    "crumbs": [
-      "Week2",
-      "Boolean Functions"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/boolean.html#question",
-    "href": "Week/Week2/boolean.html#question",
-    "title": "Boolean Functions",
-    "section": "Question",
-    "text": "Question\n\nWhy for n boolean inputs there exists \\(2^{2^n}\\) boolean functions ?\n\n\nAnswer\n\nWatch My Summary or Assignment explanation video.",
-    "crumbs": [
-      "Week2",
-      "Boolean Functions"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/boolean.html#no.-of-boolean-functions",
-    "href": "Week/Week2/boolean.html#no.-of-boolean-functions",
-    "title": "Boolean Functions",
-    "section": "No. of Boolean Functions",
-    "text": "No. of Boolean Functions\nIf n boolean inputs then \\(2^{2^n}\\) Boolean Functions Possible",
-    "crumbs": [
-      "Week2",
-      "Boolean Functions"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/represent_boolean.html",
-    "href": "Week/Week2/represent_boolean.html",
-    "title": "All Boolean Functions with Perceptron",
-    "section": "",
-    "text": "Can we implement any Boolean function with single perceptron?\n\n\nAnswer\n\nAnswer: No, Single Perceptron can only separate Linearly Separable Inputs.\n\nCan non linearly separable boolean function be implemented with multiple perceptron? How?\n\n\nAnswer\n\nAnswer: Yes, with \\(2^n + 1\\) perceptron and 3 layers(input, hidden(\\(2^n\\)), output(1)) we can definetely implement. Note: With less than \\(2^n+1\\), is also possible\n\nDo you have intution that how perceptron that linearly separate is now able to separate even non-linearly seprable boolean inputs?\n\n\nAnswer\n\nAnswer: If No then watch my summary video.\n\nCan non linearly separable boolean function be implemented with multiple perceptron? How?\n\n\nAnswer\n\nAnswer: Yes, with \\(2^n + 1\\) perceptron and 3 layers(input, hidden(\\(2^n\\)), output(1)) we can definetely implement. Note: With less than \\(2^n+1\\), is also possible\n\nWhat is minimum no. of neuron are required to implement XOR boolean function?\n\n\nAnswer\n\nAnswer: 3, with \\(2^2+1 = 5\\) we can definitely do, but question asks for minimum, and with just 3 we can implement boolean function.",
-    "crumbs": [
-      "Week2",
-      "All Boolean Functions with Perceptron"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/represent_boolean.html#questions",
-    "href": "Week/Week2/represent_boolean.html#questions",
-    "title": "All Boolean Functions with Perceptron",
-    "section": "",
-    "text": "Can we implement any Boolean function with single perceptron?\n\n\nAnswer\n\nAnswer: No, Single Perceptron can only separate Linearly Separable Inputs.\n\nCan non linearly separable boolean function be implemented with multiple perceptron? How?\n\n\nAnswer\n\nAnswer: Yes, with \\(2^n + 1\\) perceptron and 3 layers(input, hidden(\\(2^n\\)), output(1)) we can definetely implement. Note: With less than \\(2^n+1\\), is also possible\n\nDo you have intution that how perceptron that linearly separate is now able to separate even non-linearly seprable boolean inputs?\n\n\nAnswer\n\nAnswer: If No then watch my summary video.\n\nCan non linearly separable boolean function be implemented with multiple perceptron? How?\n\n\nAnswer\n\nAnswer: Yes, with \\(2^n + 1\\) perceptron and 3 layers(input, hidden(\\(2^n\\)), output(1)) we can definetely implement. Note: With less than \\(2^n+1\\), is also possible\n\nWhat is minimum no. of neuron are required to implement XOR boolean function?\n\n\nAnswer\n\nAnswer: 3, with \\(2^2+1 = 5\\) we can definitely do, but question asks for minimum, and with just 3 we can implement boolean function.",
-    "crumbs": [
-      "Week2",
-      "All Boolean Functions with Perceptron"
+      "Gradient Descent"
     ]
   },
   {
@@ -359,90 +323,13 @@
     ]
   },
   {
-    "objectID": "Week/Week2/taylor_gd.html",
-    "href": "Week/Week2/taylor_gd.html",
-    "title": "Taylor Series",
+    "objectID": "Week/Week2/week2.html",
+    "href": "Week/Week2/week2.html",
+    "title": "Week2 - More On Perceptron",
     "section": "",
-    "text": "The Taylor series is a way to approximate a function around a known point (a) as:\n\\[\\begin{align*}\n  f(x) = f(a) + \\frac{f'(a)}{1!}(x - a) + \\frac{f''(a)}{2!}(x - a)^2 + \\cdots ...\n\\end{align*}\\]\nWhere:\n\na is a known value.\nx is the value we want to approximate.\n\n\n\n\n\\(\\sqrt{36} = 6\\) , a=36\n\\(\\sqrt{35} = ?\\), x=35\n\\(f(x) = \\sqrt{x}\\)\n\\(f'(x) = \\frac{1}{2*\\sqrt{x}}\\)\n\nUsing a linear approximation (first-order Taylor expansion):\n\\[\\begin{align*}\nf(35) \\approx f(36) + f'(36)(35 - 36)\n\n= 6 + \\frac{1}{2*\\sqrt{36}} * (-1)\n\n= 5.916\n\\end{align*}\\]",
+    "text": "There are summary notes and other weeks content too.\nUse top document symbol to open navigation bar to navigate to other contents.",
     "crumbs": [
-      "Week2",
-      "Taylor Series"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/taylor_gd.html#taylor-series",
-    "href": "Week/Week2/taylor_gd.html#taylor-series",
-    "title": "Taylor Series",
-    "section": "",
-    "text": "The Taylor series is a way to approximate a function around a known point (a) as:\n\\[\\begin{align*}\n  f(x) = f(a) + \\frac{f'(a)}{1!}(x - a) + \\frac{f''(a)}{2!}(x - a)^2 + \\cdots ...\n\\end{align*}\\]\nWhere:\n\na is a known value.\nx is the value we want to approximate.\n\n\n\n\n\\(\\sqrt{36} = 6\\) , a=36\n\\(\\sqrt{35} = ?\\), x=35\n\\(f(x) = \\sqrt{x}\\)\n\\(f'(x) = \\frac{1}{2*\\sqrt{x}}\\)\n\nUsing a linear approximation (first-order Taylor expansion):\n\\[\\begin{align*}\nf(35) \\approx f(36) + f'(36)(35 - 36)\n\n= 6 + \\frac{1}{2*\\sqrt{36}} * (-1)\n\n= 5.916\n\\end{align*}\\]",
-    "crumbs": [
-      "Week2",
-      "Taylor Series"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/taylor_gd.html#replace-x-with",
-    "href": "Week/Week2/taylor_gd.html#replace-x-with",
-    "title": "Taylor Series & Gradient Descent",
-    "section": "Replace (x) with (+ )",
-    "text": "Replace (x) with (+ )\nWe replace (x) in the Taylor series with (+ ), where () is a small adjustment to ():\n[ L(+ ) = f() + f’()+ ^2 + ]\nLet’s find the best () such that: [ L(+ ) &lt; L() ]\nThis involves solving for () to minimize (L(+ )) while satisfying the condition (L(+ ) &lt; L()).\n\nFeel free to further customize this file or add additional explanations or computations as needed!",
-    "crumbs": [
-      "Week2",
-      "Taylor Series & Gradient Descent"
-    ]
-  },
-  {
-    "objectID": "Week/assignment1_2.html",
-    "href": "Week/assignment1_2.html",
-    "title": "AssignmentQuestions",
-    "section": "",
-    "text": "Coming Soon",
-    "crumbs": [
-      "Assignment 1 and 2"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/gd.html",
-    "href": "Week/Week2/gd.html",
-    "title": "Gradient Descent",
-    "section": "",
-    "text": "from math import e\ndef f(x,w,b): # sigmoid\n    val = (w*x)+b\n    return 1/(1+e**(-val))\n\n\n\n\ndef dw(w,b):\n    my_sum = 0\n    for x,y in data.items():\n        fval = f(x,w,b)\n        my_sum += (fval-y)*fval*(1-fval)*x\n    return my_sum\n\ndef db(w,b):\n    my_sum = 0\n    for x,y in data.items():\n        fval = f(x,w,b)\n        my_sum += (fval-y)*fval*(1-fval)\n    return my_sum\n\n\n\n\ndef gd(w, b, eta=1, epoch=3):\n    while epoch&gt;0:\n        (w,b) = (w - eta*dw(w,b)/2, b - eta*db(w,b)/2)\n        epoch -= 1\n    return (w,b)\n\n\ndata = {0.5:0.2, 2.5:0.9}\ngd(-2,-2,1,1000)\n\n(1.78460843762914, -2.2720512289757773)",
-    "crumbs": [
-      "Week2",
-      "Gradient Descent"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/gd.html#minimize-fwb",
-    "href": "Week/Week2/gd.html#minimize-fwb",
-    "title": "Gradient Descent",
-    "section": "",
-    "text": "Start with: \\(w_o, b_o\\)\n\n\nfrom math import e\ndef f(x,w,b): # sigmoid\n    val = (w*x)+b\n    return 1/(1+e**(-val))\n\n\n\n\ndef dw(w,b):\n    my_sum = 0\n    for x,y in data.items():\n        fval = f(x,w,b)\n        my_sum += (fval-y)*fval*(1-fval)*x\n    return my_sum\n\ndef db(w,b):\n    my_sum = 0\n    for x,y in data.items():\n        fval = f(x,w,b)\n        my_sum += (fval-y)*fval*(1-fval)\n    return my_sum\n\n\n\n\ndef gd(w, b, eta=1, epoch=3):\n    while epoch&gt;0:\n        (w,b) = (w - eta*dw(w,b)/2, b - eta*db(w,b)/2)\n        epoch -= 1\n    return (w,b)\n\n\ndata = {0.5:0.2, 2.5:0.9}\ngd(-2,-2,1,1000)\n\n(1.78460843762914, -2.2720512289757773)",
-    "crumbs": [
-      "Week2",
-      "Gradient Descent"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/gd.html#minimize-losswb-sum-frac12fxwb---y",
-    "href": "Week/Week2/gd.html#minimize-losswb-sum-frac12fxwb---y",
-    "title": "Gradient Descent",
-    "section": "",
-    "text": "Start with: \\(w_o, b_o\\)\n\n\nfrom math import e\ndef f(x,w,b): # sigmoid\n    val = (w*x)+b\n    return 1/(1+e**(-val))\n\n\n\n\ndef dw(w,b):\n    my_sum = 0\n    for x,y in data.items():\n        fval = f(x,w,b)\n        my_sum += (fval-y)*fval*(1-fval)*x\n    return my_sum\n\ndef db(w,b):\n    my_sum = 0\n    for x,y in data.items():\n        fval = f(x,w,b)\n        my_sum += (fval-y)*fval*(1-fval)\n    return my_sum\n\n\n\n\ndef gd(w, b, eta=1, epoch=3):\n    while epoch&gt;0:\n        (w,b) = (w - eta*dw(w,b)/2, b - eta*db(w,b)/2)\n        epoch -= 1\n    return (w,b)\n\n\ndata = {0.5:0.2, 2.5:0.9}\ngd(-2,-2,1,1000)\n\n(1.78460843762914, -2.2720512289757773)",
-    "crumbs": [
-      "Week2",
-      "Gradient Descent"
-    ]
-  },
-  {
-    "objectID": "Week/Week2/gd.html#minimize-losswb-sum-frac12fxwb---y2",
-    "href": "Week/Week2/gd.html#minimize-losswb-sum-frac12fxwb---y2",
-    "title": "Gradient Descent",
-    "section": "",
-    "text": "from math import e\ndef f(x,w,b): # sigmoid\n    val = (w*x)+b\n    return 1/(1+e**(-val))\n\n\n\n\ndef dw(w,b):\n    my_sum = 0\n    for x,y in data.items():\n        fval = f(x,w,b)\n        my_sum += (fval-y)*fval*(1-fval)*x\n    return my_sum\n\ndef db(w,b):\n    my_sum = 0\n    for x,y in data.items():\n        fval = f(x,w,b)\n        my_sum += (fval-y)*fval*(1-fval)\n    return my_sum\n\n\n\n\ndef gd(w, b, eta=1, epoch=3):\n    while epoch&gt;0:\n        (w,b) = (w - eta*dw(w,b)/2, b - eta*db(w,b)/2)\n        epoch -= 1\n    return (w,b)\n\n\ndata = {0.5:0.2, 2.5:0.9}\ngd(-2,-2,1,1000)\n\n(1.78460843762914, -2.2720512289757773)",
-    "crumbs": [
-      "Week2",
-      "Gradient Descent"
+      "Week2"
     ]
   }
 ]
