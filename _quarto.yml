@@ -36,7 +36,7 @@ website:
           - Week/Week2/sigmoid.qmd
           - Week/Week2/taylor_gd.qmd
           - Week/Week2/gd.qmd
-      - section: "Assignment 1 and 2"
+      - text: "Assignment 1 and 2"
         href: Week/assignment1_2.qmd
       
 

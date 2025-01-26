@@ -3,5 +3,4 @@ title: "Week2"
 format: html
 ---
 
-### I am also learning along with you
-#### Kindly wait content will be uploaded before quizes.
+{{< video https://youtu.be/glpCDBv0tiY >}}

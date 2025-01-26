@@ -3,4 +3,5 @@ title: "AssignmentQuestions"
 format: html
 ---
 
-**Coming Soon before deadline**
+
+{{< video https://youtu.be/fqgv-KC7rss >}}
