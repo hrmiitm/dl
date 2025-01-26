@@ -5,7 +5,7 @@ format: html
 ___
 
 
-{{< video https://youtu.be/6pcbdESqBEQ >}}
+{{< video https://youtu.be/glpCDBv0tiY >}}
 ___
 
 There are *summary notes* and other weeks content too.
